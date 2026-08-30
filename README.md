@@ -1,8 +1,11 @@
 # Site institucional — CRIE / APAE Extrema
 
-Next.js 16 (App Router) + TypeScript + Tailwind CSS v4, SSG, sem backend obrigatório na v1.
+Landing page única do CRIE — Centro de Integração Especial, Extrema/MG. Next.js 16 (App Router) + TypeScript + Tailwind CSS v4, implementando o handoff de design em `docs/handoff/`.
 
-Contexto completo do projeto: `docs/specs/constitution.md`. Sitemap: `docs/specs/00-sitemap.md`. Pendências de conteúdo real (fotos, textos, PIX, domínio): `docs/specs/pendencias.md`.
+- Produção: https://site-crie.vercel.app
+- Handoff de design (fonte de verdade): `docs/handoff/README.md`
+- Decisões e processo: `docs/specs/constitution.md`
+- Pendências de conteúdo real: `docs/specs/pendencias.md`
 
 ## Dev
 
@@ -11,8 +14,6 @@ npm install
 npm run dev
 ```
 
-Abre `http://localhost:3000`.
-
 ## Build / produção local
 
 ```bash
@@ -20,35 +21,38 @@ npm run build
 npm run start
 ```
 
-## Lint
+## Lint e checks
 
 ```bash
 npm run lint
+node --experimental-strip-types src/lib/por-extenso.test.mjs
 ```
 
 ## Estrutura
 
-- `content/` — conteúdo textual (JSON/MDX), fora dos componentes. Editar aqui não mexe em código
-- `src/app/` — rotas (App Router)
-- `src/components/ui/` — componentes base (Button, Card, Section, Timeline)
-- `src/components/layout/` — Header, Footer, SkipLink, MobileNav
-- `src/components/a11y/` — VLibras, toolbar fonte/contraste
-- `docs/specs/` — specs por página/feature, spec-driven (ver constitution.md pro processo)
+- `content/landing.json` — todo o conteúdo da landing. Editar aqui não mexe em componente
+- `content/noticias/*.mdx` — posts do blog
+- `src/components/sections/` — uma seção da landing por arquivo, na ordem vertical da página
+- `src/components/ui/primitives.tsx` — `Container`, `Eyebrow`, `ImagePlaceholder`
+- `src/components/a11y/` — VLibras, controle de fonte e contraste
+- `src/app/api/contato/` — envio do formulário
+- `docs/handoff/` — pacote de design original (referência, não é código do projeto)
 
-## Deploy na Vercel
+## Variáveis de ambiente
 
-1. Criar conta/projeto em [vercel.com](https://vercel.com) (ou `npm i -g vercel` pra usar a CLI)
-2. Conectar o repositório Git (GitHub/GitLab/Bitbucket) — push deste repo pra um remoto primeiro
-3. Vercel detecta Next.js automaticamente, sem configuração extra necessária
-4. Variável de ambiente opcional: `NEXT_PUBLIC_SITE_URL` — setar quando o domínio definitivo for escolhido (ver `docs/specs/pendencias.md`). Sem ela, usa `https://crieextrema.com.br` como placeholder
-5. Deploy automático a cada push; preview URL por PR
+| Variável | Para quê | Sem ela |
+|---|---|---|
+| `NEXT_PUBLIC_SITE_URL` | URL canônica em metadata/sitemap | usa `https://crieextrema.com.br` |
+| `RESEND_API_KEY` | envio do formulário de contato | rota responde 503 informando telefone e e-mail |
+| `CONTATO_EMAIL_DESTINO` | caixa que recebe as mensagens | usa o e-mail institucional |
+| `CONTATO_EMAIL_REMETENTE` | remetente verificado no Resend | usa `site@crieextrema.com.br` |
 
-Nenhum deploy foi executado nesta sessão — repositório ainda é só local, sem remoto configurado.
+Setar em Vercel → Project → Settings → Environment Variables.
 
-## Pendências que bloqueiam publicação (não bloqueiam o build)
+## Deploy
 
-Ver checklist completo em `docs/specs/pendencias.md`. Resumo: logo em alta resolução/transparente, fotos reais, texto completo das áreas de atuação, dados de doação PIX, confirmação de contato, domínio definitivo.
+Repositório conectado à Vercel: todo push em `master` gera deploy de produção; PRs geram preview.
 
 ## Acessibilidade
 
-Checklist completo em `docs/specs/accessibility-checklist.md`.
+Checklist em `docs/specs/accessibility-checklist.md`. Itens que exigem navegador real (Lighthouse, teclado, VLibras) ainda não foram medidos.

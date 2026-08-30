@@ -1,26 +1,26 @@
-# Pendências — bloqueiam publicação, não bloqueiam scaffold
+# Pendências
 
-Seguir com placeholder marcado até Miguel entregar. Nunca inventar.
+Bloqueiam a publicação. Não bloqueiam build nem deploy — cada uma renderiza placeholder explícito.
 
-- [x] Logo CRIE recebido (`public/brand/logo-crie-original.jpg`) — colorido, fundo branco/nuvens não-transparente
-  - [ ] Ainda falta: versão alta resolução com fundo transparente (PNG/SVG) e versão pra fundo escuro
-- [ ] Fotos reais atividades/instalações/equipe (com autorização de uso de imagem)
-- [ ] Texto completo das 5 áreas de atuação
-- [ ] Dados de doação: chave PIX / dados bancários / QR code
-- [ ] Confirmar telefone, e-mail, horário de funcionamento c/ diretora Agnes
-- [ ] Definir domínio (reaproveitar crieextrema.com.br ou registrar novo)
+## Assets e dados da instituição
+- [x] Logo oficial recebido (`public/brand/crie-logo-oficial.png`, PNG 150×70 com transparência)
+  - [ ] Pedir **SVG** da marca — em tela retina o PNG fica macio (handoff)
+- [ ] **Foto do hero** — horizontal, atendimento ou oficina. Autorização de uso de imagem por escrito (há menores)
+- [ ] **Foto da fachada da sede** — vertical/quadrada, seção História
+- [ ] **15 logotipos de parceiros** — PNG transparente ou SVG. Hoje são placas tipográficas provisórias
+- [ ] **PDFs de transparência** — relatório de atividades, demonstrativo financeiro, estatuto social, certidões
+- [ ] **Chave Pix oficial** — card de doação
+- [ ] **Horário de atendimento** — não consta no protótipo; campo `contato.horarioAtendimento` já existe e some quando `null`
+- [ ] **Número real de famílias atendidas** — a barra de campanha diz "mais de 100"; confirmar com a direção ou remover (`topBar.fraseConfirmada: false`)
+- [ ] Confirmar telefone, e-mail e endereço com a diretora (Agnes) — podem estar desatualizados
+- [ ] Definir domínio (reaproveitar crieextrema.com.br ou registrar novo) e setar `NEXT_PUBLIC_SITE_URL` na Vercel
 
-## Dado real já disponível (usar direto)
+## Configuração técnica
+- [ ] `RESEND_API_KEY` na Vercel — sem ela o formulário responde 503 com telefone/e-mail alternativos
+- [ ] `CONTATO_EMAIL_DESTINO` (default: e-mail institucional) e `CONTATO_EMAIL_REMETENTE` (precisa de domínio verificado no Resend)
 
-**Contato — CONFIRMAR antes de publicar, pode estar desatualizado:**
-- Endereço: Rua Véu da Noiva, 62 — Ponte Nova, Extrema/MG, CEP 37640-000
-- Telefone: (35) 98423-5789
-- E-mail: crieespecial@yahoo.com.br
-- CNPJ: 25.651.282/0001-18
-- Facebook: facebook.com/crieespecial · Instagram: @apaedeextrema
+## Lacuna funcional conhecida (handoff, prioridade de produto)
+- [ ] **Fluxo de doação real.** Hoje "Quero doar" só rola até o formulário. O handoff aponta isso como a maior lacuna: deveria ser Pix com QR code copiável e/ou gateway com cartão recorrente
 
-**Timeline certificações:**
-1991 Fundação · 2005 Filiação Federação APAEs · 2006 Título Utilidade Pública Estadual + CNAS · 2007 Título Cidadão Honorário Extremense (presidente+diretora) · 2010 Título Utilidade Pública Federal · 2016 Autorização CAEE + Certificado Entidade Beneficente
-
-**Depoimentos (primeiro nome):**
-- Terezinha, Maraisa, Sidneia, Gislaine — texto completo no brief original
+## Dados reais já em uso
+Endereço Rua Véu da Noiva, 62 · Extrema/MG · CEP 37640-000 — Telefone (35) 98423-5789 — E-mail crieespecial@yahoo.com.br — CNPJ 25.651.282/0001-18 — facebook.com/crieespecial — Instagram @apaedeextrema

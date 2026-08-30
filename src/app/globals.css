@@ -1,60 +1,129 @@
 @import "tailwindcss";
 
+/* Tokens do handoff de design (docs/handoff/README.md — seção Design Tokens).
+   Valores exatos; não improvisar. */
 :root {
-  --background: #ffffff;
-  --foreground: #1a1a1a;
+  /* base */
+  --ink-900: #0e1013;
+  --ink-800: #16181c;
+  --ink-700: #1a1d22;
+  --ink-600: #2a2d33;
+  --ink-500: #3a3d44;
+  --slate-400: #5a5d64;
+  --warm-100: #f6f5f2;
+  --warm-200: #efede7;
+  --line-200: #e2dfd8;
+  --line-300: #dcd8d0;
+  --mute-400: #8a867e;
+  --mute-450: #9a968c;
+  --mute-500: #8c8880;
+  --mute-600: #6e6a63;
+  --body-dark: #b9b5ac;
 
-  /* paleta extraída da logo CRIE, contraste AA checado — ver docs/specs/constitution.md */
-  --brand-blue: #1663b3; /* primária: CTA, links, header — 6.05:1 c/ texto branco */
-  --brand-purple: #6e2e8e; /* CTA secundário, destaque — 8.59:1 c/ texto branco */
-  --brand-pink: #e4007c; /* 4.58:1 — só texto grande/negrito com texto branco */
-  --brand-pink-dark: #c10069; /* shade seguro pra texto normal branco */
-  --brand-cyan: #00aeef; /* decorativo apenas, texto escuro por cima */
-  --brand-yellow: #f5b711; /* decorativo apenas, texto escuro por cima */
+  /* acento — derivados do logotipo */
+  --magenta: #e5006e;
+  --amarelo: #f2b300;
+  --roxo: #8a21ce;
+  --roxo-claro: #e7cbfa;
+  --ciano: #12a9e0;
+  --verde: #2e9e63;
+  --link: #0b7aa6;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --color-brand-blue: var(--brand-blue);
-  --color-brand-purple: var(--brand-purple);
-  --color-brand-pink: var(--brand-pink);
-  --color-brand-pink-dark: var(--brand-pink-dark);
-  --color-brand-cyan: var(--brand-cyan);
-  --color-brand-yellow: var(--brand-yellow);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-ink-900: var(--ink-900);
+  --color-ink-800: var(--ink-800);
+  --color-ink-700: var(--ink-700);
+  --color-ink-600: var(--ink-600);
+  --color-ink-500: var(--ink-500);
+  --color-slate-400: var(--slate-400);
+  --color-warm-100: var(--warm-100);
+  --color-warm-200: var(--warm-200);
+  --color-line-200: var(--line-200);
+  --color-line-300: var(--line-300);
+  --color-mute-400: var(--mute-400);
+  --color-mute-450: var(--mute-450);
+  --color-mute-500: var(--mute-500);
+  --color-mute-600: var(--mute-600);
+  --color-body-dark: var(--body-dark);
+  --color-magenta: var(--magenta);
+  --color-amarelo: var(--amarelo);
+  --color-roxo: var(--roxo);
+  --color-roxo-claro: var(--roxo-claro);
+  --color-ciano: var(--ciano);
+  --color-verde: var(--verde);
+  --color-link: var(--link);
+
+  --font-display: var(--font-bricolage);
+  --font-sans: var(--font-archivo);
+  --font-mono: var(--font-plex-mono);
 }
 
-/* sem dark mode automático via prefers-color-scheme: público-alvo usa fonte grande/alto contraste
-   controlado por toggle explícito (ver a11y/ContrastToggle), não pelo SO */
+html {
+  scroll-behavior: smooth;
+}
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
-  font-size: 1.0625rem; /* 17px base, público inclui baixa visão */
+  margin: 0;
+  background: var(--warm-100);
+  color: var(--ink-800);
+  font-family: var(--font-archivo), sans-serif;
+  -webkit-font-smoothing: antialiased;
 }
 
-/* alto contraste — ativado via A11yToolbar, persistido em localStorage */
-:root.contrast-high {
-  --background: #ffffff;
-  --foreground: #000000;
+/* âncoras não podem ficar sob o header sticky (~88px, ~132px com a barra de campanha) */
+[id] {
+  scroll-margin-top: 132px;
 }
-.contrast-high a,
-.contrast-high button {
+
+/* Handoff exige anel de foco visível — o protótipo usa outline:none, não replicar.
+   Requisito de negócio: público inclui pessoas com deficiência. */
+:focus-visible {
+  outline: 3px solid var(--ciano);
+  outline-offset: 2px;
+}
+
+/* alto contraste — ativado pela A11yToolbar, persistido em localStorage */
+:root.contrast-high {
+  --ink-500: #16181c;
+  --slate-400: #16181c;
+  --mute-400: #4a463e;
+  --mute-450: #4a463e;
+  --mute-500: #d6d2ca;
+  --mute-600: #d6d2ca;
+  --body-dark: #f6f5f2;
+}
+.contrast-high a {
   text-decoration: underline;
 }
-.contrast-high img {
-  filter: contrast(1.15);
+
+/* hachura dos placeholders de imagem */
+.hatch-dark {
+  background-color: var(--ink-700);
+  background-image: repeating-linear-gradient(
+    135deg,
+    rgba(246, 245, 242, 0.055) 0 12px,
+    transparent 12px 24px
+  );
+}
+.hatch-light {
+  background-color: var(--warm-200);
+  background-image: repeating-linear-gradient(
+    135deg,
+    rgba(22, 24, 28, 0.06) 0 12px,
+    transparent 12px 24px
+  );
 }
 
-/* respeita prefers-reduced-motion globalmente */
 @media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
   }
 }

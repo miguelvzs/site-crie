@@ -1,0 +1,245 @@
+{
+  "org": {
+    "name": "CRIE — Centro de Integração Especial",
+    "shortName": "CRIE/APAE Extrema",
+    "lockupLinha1": "Centro de Integração",
+    "lockupLinha2": "Especial",
+    "lockupLocal": "EXTREMA · MG",
+    "fundacao": 1991
+  },
+  "nav": [
+    { "label": "Quem somos", "href": "#quem-somos" },
+    { "label": "Áreas de atuação", "href": "#atuacao" },
+    { "label": "História", "href": "#historia" },
+    { "label": "Como ajudar", "href": "#ajudar" },
+    { "label": "Contato", "href": "#contato" }
+  ],
+  "topBar": {
+    "mostrar": true,
+    "eyebrow": "Faça parte",
+    "frase": "Sua contribuição sustenta o atendimento gratuito de mais de 100 famílias em Extrema.",
+    "fraseConfirmada": false,
+    "cta": "Quero apoiar"
+  },
+  "hero": {
+    "titulo": "Desenvolver potencialidades, garantir direitos.",
+    "paragrafo": "O CRIE atende gratuitamente pessoas com deficiência e suas famílias em Extrema, no sul de Minas Gerais. Fundado em 1991 por um grupo de cidadãos solidários, é filiado à Federação das APAEs e reconhecido como entidade de utilidade pública federal.",
+    "ctaPrimario": "Quero ajudar o CRIE",
+    "ctaSecundario": "Conhecer os atendimentos",
+    "imagemLegenda": "foto — atendimento ou oficina, horizontal",
+    "imagemNota": "Substituir por imagem real, com autorização de uso de imagem."
+  },
+  "credenciais": {
+    "destaque": "Desde 1991",
+    "itens": [
+      "Filiado à Federação das APAEs de Minas Gerais",
+      "Utilidade pública federal e estadual",
+      "Certificado de Entidade Beneficente"
+    ]
+  },
+  "quemSomos": {
+    "eyebrow": "Quem somos",
+    "titulo": "Uma instituição que a própria cidade criou",
+    "paragrafos": [
+      "Em 1991, Extrema não tinha atendimento especializado para pessoas com deficiência. Um grupo de cidadãos solidários se organizou e fundou o CRIE — Centro de Integração Especial, uma associação sem fins lucrativos.",
+      "Desde então, o trabalho é o mesmo: desenvolver as potencialidades e habilidades de cada pessoa atendida, apoiar a família e defender o direito à inclusão na escola, no trabalho e na cidade.",
+      "Todo o atendimento é gratuito, feito por equipe multidisciplinar, e sustentado por convênios públicos, doações e pelo apoio de empresas da região."
+    ]
+  },
+  "atuacao": {
+    "eyebrow": "Áreas de atuação",
+    "titulo": "Cinco frentes, uma equipe só",
+    "paragrafo": "O acompanhamento é discutido em conjunto: o que acontece numa área é levado às outras nas reuniões semanais de equipe.",
+    "cards": [
+      {
+        "numero": "01",
+        "cor": "#E5006E",
+        "span": 2,
+        "titulo": "Atendimento educacional especializado",
+        "corpo": "Serviço autorizado como CAEE, com plano pedagógico individual e apoio à escolarização na rede regular."
+      },
+      {
+        "numero": "02",
+        "cor": "#F2B300",
+        "span": 2,
+        "titulo": "Saúde",
+        "corpo": "Atendimento clínico e terapêutico por equipe multidisciplinar, com encaminhamentos à rede pública quando necessário."
+      },
+      {
+        "numero": "03",
+        "cor": "#8A21CE",
+        "span": 2,
+        "titulo": "Assistência social",
+        "corpo": "Acolhimento das famílias, orientação sobre direitos e benefícios e articulação com os serviços do município."
+      },
+      {
+        "numero": "04",
+        "cor": "#12A9E0",
+        "span": 3,
+        "titulo": "Oficinas",
+        "corpo": "Atividades práticas e produtivas voltadas a jovens e adultos, com foco em autonomia, convivência e preparação para o trabalho."
+      },
+      {
+        "numero": "05",
+        "cor": "#2E9E63",
+        "span": 3,
+        "titulo": "Projetos complementares",
+        "corpo": "Programas de formação e apoio às famílias, entre eles a Escola de Pais, da UNIAPAE-MG."
+      }
+    ]
+  },
+  "historia": {
+    "eyebrow": "História",
+    "imagemLegenda": "foto — fachada da sede",
+    "imagemNota": "Rua Véu da Noiva, 62 — Extrema/MG.",
+    "marcos": [
+      {
+        "ano": "1991",
+        "cor": "#E5006E",
+        "texto": "Fundação do CRIE por um grupo de cidadãos solidários, diante da falta de atendimento especializado na cidade."
+      },
+      {
+        "ano": "2005",
+        "cor": "#F2B300",
+        "texto": "Filiação à Federação das APAEs, integrando o movimento apaeano de Minas Gerais."
+      },
+      {
+        "ano": "2006",
+        "cor": "#8A21CE",
+        "texto": "Reconhecimento como entidade de utilidade pública estadual e inscrição no conselho nacional de assistência social."
+      },
+      {
+        "ano": "2007",
+        "cor": "#12A9E0",
+        "texto": "Título de Cidadão Honorário Extremense concedido à presidência e à direção da instituição."
+      },
+      {
+        "ano": "2010",
+        "cor": "#2E9E63",
+        "texto": "Reconhecimento como entidade de utilidade pública federal."
+      },
+      {
+        "ano": "2016",
+        "cor": "#E5006E",
+        "texto": "Autorização para funcionar como Centro de Atendimento Educacional Especializado e Certificado de Entidade Beneficente de Assistência Social."
+      }
+    ]
+  },
+  "depoimentos": {
+    "mostrar": true,
+    "eyebrow": "Depoimentos",
+    "titulo": "Quem convive com o CRIE",
+    "itens": [
+      {
+        "citacao": "O CRIE é o lugar onde meu filho e outras crianças são cuidadas com muito amor e dedicação. Lugar abençoado!",
+        "nome": "Terezinha",
+        "relacao": null
+      },
+      {
+        "citacao": "O CRIE/APAE — para nós significa amor e esperança. A dedicação e o carinho fazem toda diferença no trabalho realizado… Anjos em forma de gente.",
+        "nome": "Maraisa",
+        "relacao": "Miguel Pedroso"
+      },
+      {
+        "citacao": "A Darly ama ir ao CRIE/APAE, nossa segunda família. Amor, dedicação, esforço, são muitos adjetivos. Deus abençoe a todos pelo esforço e dedicação com nossos filhos.",
+        "nome": "Sidneia",
+        "relacao": "mãe de Darly"
+      }
+    ]
+  },
+  "ajudar": {
+    "eyebrow": "Como ajudar",
+    "titulo": "O atendimento é gratuito — mas não é de graça",
+    "paragrafo": "Cada contribuição vira hora de terapia, material de oficina e transporte de quem mora longe.",
+    "chavePix": null,
+    "cards": [
+      {
+        "kicker": "DOAÇÃO",
+        "kickerCor": "#F2B300",
+        "titulo": "Doe uma vez ou todo mês",
+        "corpo": "A doação recorrente é a que mais ajuda: permite planejar o atendimento do ano inteiro.",
+        "cta": "Quero doar",
+        "destaque": true
+      },
+      {
+        "kicker": "VOLUNTARIADO",
+        "kickerCor": "#8A21CE",
+        "titulo": "Doe tempo e conhecimento",
+        "corpo": "Oficinas, eventos, manutenção, apoio administrativo. A conversa começa com uma visita à instituição.",
+        "cta": "Ser voluntário",
+        "destaque": false
+      },
+      {
+        "kicker": "EMPRESAS",
+        "kickerCor": "#12A9E0",
+        "titulo": "Parceria institucional",
+        "corpo": "Patrocínio de projeto, doação de materiais ou cessão de serviços. O parque industrial de Extrema é vizinho — e pode ser parceiro.",
+        "cta": "Falar com a direção",
+        "destaque": false
+      }
+    ]
+  },
+  "transparencia": {
+    "mostrar": true,
+    "eyebrow": "Transparência",
+    "titulo": "Quem doa tem direito de ver",
+    "paragrafo": "Documentos públicos da instituição, disponíveis para download.",
+    "documentos": [
+      { "titulo": "Relatório anual de atividades", "url": null },
+      { "titulo": "Demonstrativo financeiro", "url": null },
+      { "titulo": "Estatuto social", "url": null },
+      { "titulo": "Certidões, títulos e registros", "url": null }
+    ]
+  },
+  "parceiros": {
+    "mostrar": true,
+    "eyebrow": "Conheça nossos parceiros",
+    "titulo": "Quem sustenta o atendimento junto com a gente",
+    "cta": "Sua empresa aqui",
+    "nota": "Placas tipográficas provisórias — enviar os arquivos de logotipo dos parceiros para substituição.",
+    "itens": [
+      { "nome": "Prefeitura de Extrema", "logoUrl": null },
+      { "nome": "Grupo Energisa", "logoUrl": null },
+      { "nome": "Pandurata Alimentos", "logoUrl": null },
+      { "nome": "Extremamedic Planos de Saúde", "logoUrl": null },
+      { "nome": "MPTran Clínica Médica e Psicológica", "logoUrl": null },
+      { "nome": "Dello", "logoUrl": null },
+      { "nome": "Jofpar", "logoUrl": null },
+      { "nome": "Frum", "logoUrl": null },
+      { "nome": "Viro Aço", "logoUrl": null },
+      { "nome": "Eletan Materiais Elétricos", "logoUrl": null },
+      { "nome": "Force Line", "logoUrl": null },
+      { "nome": "Poli Sopro", "logoUrl": null },
+      { "nome": "MW Auto Peças e Mecânica Waltão", "logoUrl": null },
+      { "nome": "Cadabra Publicidade", "logoUrl": null },
+      { "nome": "Musical Box", "logoUrl": null }
+    ]
+  },
+  "contato": {
+    "eyebrow": "Contato",
+    "titulo": "Venha conhecer o CRIE",
+    "paragrafo": "Famílias, voluntários e empresas: a porta está aberta. Agende uma visita e converse com a equipe.",
+    "endereco": "Rua Véu da Noiva, 62 · Extrema, MG",
+    "telefone": "(35) 98423-5789",
+    "telefoneHref": "tel:+5535984235789",
+    "email": "crieespecial@yahoo.com.br",
+    "facebook": "https://www.facebook.com/crieespecial",
+    "facebookLabel": "facebook.com/crieespecial",
+    "horarioAtendimento": null,
+    "formulario": {
+      "titulo": "Mande uma mensagem",
+      "botaoLabel": "Enviar mensagem",
+      "assuntos": [
+        "Sou família e quero atendimento",
+        "Quero doar",
+        "Quero ser voluntário",
+        "Sou empresa e quero apoiar",
+        "Outro assunto"
+      ]
+    }
+  },
+  "footer": {
+    "linha1": "CRIE — Centro de Integração Especial",
+    "linha2": "Rua Véu da Noiva, 62 · Extrema, MG · Desde 1991"
+  }
+}

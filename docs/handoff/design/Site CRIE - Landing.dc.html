@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Archivo:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  html,body{margin:0;padding:0;background:#F6F5F2;-webkit-font-smoothing:antialiased}
+  *{box-sizing:border-box}
+  a{color:#0B7AA6;text-decoration:none}
+  a:hover{color:#E5006E}
+</style>
+</helmet>
+
+<div style="font-family:'Archivo',sans-serif;color:#16181C">
+
+<sc-if value="{{ showTopBar }}" hint-placeholder-val="{{ true }}">
+  <div style="display:flex;align-items:center;justify-content:center;gap:20px;flex-wrap:wrap;padding:12px 32px;background:#E5006E;color:#FFFFFF">
+    <span style="font:500 12px 'IBM Plex Mono',monospace;letter-spacing:.14em;text-transform:uppercase">Faça parte</span>
+    <span style="font-family:'Archivo',sans-serif;font-size:15px">Sua contribuição sustenta o atendimento gratuito de mais de 100 famílias em Extrema.</span>
+    <a href="#ajudar" style="font-family:'Archivo',sans-serif;font-weight:600;font-size:15px;color:#FFFFFF;border-bottom:2px solid rgba(255,255,255,.5)" style-hover="border-bottom:2px solid #FFFFFF;color:#FFFFFF">Quero apoiar</a>
+  </div>
+</sc-if>
+
+<header style="position:sticky;top:0;z-index:50;background:rgba(246,245,242,.93);backdrop-filter:blur(12px);border-bottom:1px solid #E2DFD8">
+  <div style="display:flex;align-items:center;gap:40px;max-width:1240px;margin:0 auto;padding:16px 32px">
+    <a href="#" style="display:flex;align-items:center;gap:16px;flex:none">
+      <img src="assets/crie-logo-oficial.png" alt="CRIE — Centro de Integração Especial" style="width:118px;height:55px;object-fit:contain;display:block">
+      <span style="display:flex;flex-direction:column;gap:3px;padding-left:16px;border-left:1px solid #DCD8D0">
+        <span style="font-family:'Archivo',sans-serif;font-weight:600;font-size:13.5px;line-height:1.25;color:#3A3D44">Centro de Integração<br>Especial</span>
+        <span style="font:500 10px 'IBM Plex Mono',monospace;letter-spacing:.1em;color:#8A867E">EXTREMA · MG</span>
+      </span>
+    </a>
+    <nav style="display:flex;gap:30px;margin-left:auto;flex-wrap:wrap">
+      <a href="#quem-somos" style="font-family:'Archivo',sans-serif;font-weight:500;font-size:16px;color:#3A3D44" style-hover="color:#E5006E">Quem somos</a>
+      <a href="#atuacao" style="font-family:'Archivo',sans-serif;font-weight:500;font-size:16px;color:#3A3D44" style-hover="color:#E5006E">Áreas de atuação</a>
+      <a href="#historia" style="font-family:'Archivo',sans-serif;font-weight:500;font-size:16px;color:#3A3D44" style-hover="color:#E5006E">História</a>
+      <a href="#ajudar" style="font-family:'Archivo',sans-serif;font-weight:500;font-size:16px;color:#3A3D44" style-hover="color:#E5006E">Como ajudar</a>
+      <a href="#contato" style="font-family:'Archivo',sans-serif;font-weight:500;font-size:16px;color:#3A3D44" style-hover="color:#E5006E">Contato</a>
+    </nav>
+    <a href="#ajudar" style="flex:none;font-family:'Archivo',sans-serif;font-weight:600;font-size:16px;color:#FFFFFF;background:#16181C;padding:13px 24px;border-radius:2px" style-hover="background:#E5006E;color:#FFFFFF">Doar agora</a>
+  </div>
+</header>
+
+<section style="background:#0E1013;color:#F6F5F2;overflow:hidden">
+  <div style="display:grid;grid-template-columns:1.1fr .9fr;gap:64px;align-items:center;max-width:1240px;margin:0 auto;padding:104px 32px 112px">
+    <div style="display:flex;flex-direction:column;align-items:flex-start">
+      <div style="display:flex;gap:5px;margin-bottom:32px">
+        <span style="display:block;width:44px;height:7px;background:#E5006E"></span>
+        <span style="display:block;width:44px;height:7px;background:#F2B300"></span>
+        <span style="display:block;width:44px;height:7px;background:#8A21CE"></span>
+        <span style="display:block;width:44px;height:7px;background:#12A9E0"></span>
+      </div>
+      <h1 style="margin:0;font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:66px;line-height:1.02;letter-spacing:-.03em;text-wrap:pretty">Desenvolver potencialidades, garantir direitos.</h1>
+      <p style="margin:26px 0 0;font-family:'Archivo',sans-serif;font-size:21px;line-height:1.5;color:#B9B5AC;max-width:620px;text-wrap:pretty">O CRIE atende gratuitamente pessoas com deficiência e suas famílias em Extrema, no sul de Minas Gerais. Fundado em 1991 por um grupo de cidadãos solidários, é filiado à Federação das APAEs e reconhecido como entidade de utilidade pública federal.</p>
+      <div style="display:flex;flex-wrap:wrap;gap:14px;margin-top:40px">
+        <a href="#ajudar" style="font-family:'Archivo',sans-serif;font-weight:600;font-size:17px;color:#16181C;background:#F2B300;padding:17px 32px;border-radius:2px" style-hover="background:#FFFFFF;color:#16181C">Quero ajudar o CRIE</a>
+        <a href="#atuacao" style="font-family:'Archivo',sans-serif;font-weight:600;font-size:17px;color:#F6F5F2;padding:17px 32px;border:2px solid #3A3D44;border-radius:2px" style-hover="border-color:#F6F5F2;color:#F6F5F2">Conhecer os atendimentos</a>
+      </div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:12px">
+      <div style="display:flex;align-items:flex-end;justify-content:center;height:440px;padding:20px;background-color:#1A1D22;background-image:repeating-linear-gradient(135deg,rgba(246,245,242,.055) 0 12px,transparent 12px 24px)">
+        <span style="font:500 12.5px 'IBM Plex Mono',monospace;letter-spacing:.1em;color:#8C8880;text-align:center;text-transform:uppercase">foto — atendimento ou oficina, horizontal</span>
+      </div>
+      <span style="font:500 11.5px 'IBM Plex Mono',monospace;letter-spacing:.06em;color:#6E6A63">Substituir por imagem real, com autorização de uso de imagem.</span>
+    </div>
+  </div>
+</section>
+
+<div style="background:#16181C;border-top:1px solid #2A2D33">
+  <div style="display:flex;flex-wrap:wrap;gap:16px 52px;align-items:center;max-width:1240px;margin:0 auto;padding:26px 32px">
+    <span style="font:500 13px 'IBM Plex Mono',monospace;letter-spacing:.12em;color:#F2B300;text-transform:uppercase">Desde 1991</span>
+    <span style="font-family:'Archivo',sans-serif;font-size:16px;color:#B9B5AC">Filiado à Federação das APAEs de Minas Gerais</span>
+    <span style="font-family:'Archivo',sans-serif;font-size:16px;color:#B9B5AC">Utilidade pública federal e estadual</span>
+    <span style="font-family:'Archivo',sans-serif;font-size:16px;color:#B9B5AC">Certificado de Entidade Beneficente</span>
+  </div>
+</div>
+
+<section id="quem-somos" style="background:#F6F5F2">
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start;max-width:1240px;margin:0 auto;padding:100px 32px 88px">
+    <div style="display:flex;flex-direction:column">
+      <span style="font:500 13px 'IBM Plex Mono',monospace;letter-spacing:.16em;color:#8A21CE;text-transform:uppercase">Quem somos</span>
+      <h2 style="margin:18px 0 0;font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:44px;line-height:1.05;letter-spacing:-.025em;text-wrap:pretty">Uma instituição que a própria cidade criou</h2>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:18px;padding-top:8px">
+      <p style="margin:0;font-family:'Archivo',sans-serif;font-size:19px;line-height:1.6;color:#3A3D44;text-wrap:pretty">Em 1991, Extrema não tinha atendimento especializado para pessoas com deficiência. Um grupo de cidadãos solidários se organizou e fundou o CRIE — Centro de Integração Especial, uma associação sem fins lucrativos.</p>
+      <p style="margin:0;font-family:'Archivo',sans-serif;font-size:19px;line-height:1.6;color:#3A3D44;text-wrap:pretty">Desde então, o trabalho é o mesmo: desenvolver as potencialidades e habilidades de cada pessoa atendida, apoiar a família e defender o direito à inclusão na escola, no trabalho e na cidade.</p>
+      <p style="margin:0;font-family:'Archivo',sans-serif;font-size:19px;line-height:1.6;color:#3A3D44;text-wrap:pretty">Todo o atendimento é gratuito, feito por equipe multidisciplinar, e sustentado por convênios públicos, doações e pelo apoio de empresas da região.</p>
+    </div>
+  </div>
+</section>
+
+<section id="atuacao" style="background:#FFFFFF;border-top:1px solid #E2DFD8">
+  <div style="max-width:1240px;margin:0 auto;padding:100px 32px">
+    <span style="font:500 13px 'IBM Plex Mono',monospace;letter-spacing:.16em;color:#E5006E;text-transform:uppercase">Áreas de atuação</span>
+    <h2 style="margin:18px 0 0;font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:44px;line-height:1.05;letter-spacing:-.025em;max-width:820px;text-wrap:pretty">Cinco frentes, uma equipe só</h2>
+    <p style="margin:18px 0 0;font-family:'Archivo',sans-serif;font-size:19px;line-height:1.55;color:#5A5D64;max-width:720px;text-wrap:pretty">O acompanhamento é discutido em conjunto: o que acontece numa área é levado às outras nas reuniões semanais de equipe.</p>
+    <div style="display:grid;grid-template-columns:repeat(6,1fr);gap:24px;margin-top:56px">
+      <article style="grid-column:span 2;display:flex;flex-direction:column;gap:14px;padding:34px 30px 38px;background:#F6F5F2;border-top:7px solid #E5006E">
+        <span style="font:500 12px 'IBM Plex Mono',monospace;letter-spacing:.12em;color:#8A867E">01</span>
+        <h3 style="margin:0;font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:27px;line-height:1.1;letter-spacing:-.02em">Atendimento educacional especializado</h3>
+        <p style="margin:0;font-family:'Archivo',sans-serif;font-size:16.5px;line-height:1.55;color:#5A5D64;text-wrap:pretty">Serviço autorizado como CAEE, com plano pedagógico individual e apoio à escolarização na rede regular.</p>
+      </article>
+      <article style="grid-column:span 2;display:flex;flex-direction:column;gap:14px;padding:34px 30px 38px;background:#F6F5F2;border-top:7px solid #F2B300">
+        <span style="font:500 12px 'IBM Plex Mono',monospace;letter-spacing:.12em;color:#8A867E">02</span>
+        <h3 style="margin:0;font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:27px;line-height:1.1;letter-spacing:-.02em">Saúde</h3>
+        <p style="margin:0;font-family:'Archivo',sans-serif;font-size:16.5px;line-height:1.55;color:#5A5D64;text-wrap:pretty">Atendimento clínico e terapêutico por equipe multidisciplinar, com encaminhamentos à rede pública quando necessário.</p>
+      </article>
+      <article style="grid-column:span 2;display:flex;flex-direction:column;gap:14px;padding:34px 30px 38px;background:#F6F5F2;border-top:7px solid #8A21CE">
+        <span style="font:500 12px 'IBM Plex Mono',monospace;letter-spacing:.12em;color:#8A867E">03</span>
+        <h3 style="margin:0;font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:27px;line-height:1.1;letter-spacing:-.02em">Assistência social</h3>
+        <p style="margin:0;font-family:'Archivo',sans-serif;font-size:16.5px;line-height:1.55;color:#5A5D64;text-wrap:pretty">Acolhimento das famílias, orientação sobre direitos e benefícios e articulação com os serviços do município.</p>
+      </article>
+      <article style="grid-column:span 3;display:flex;flex-direction:column;gap:14px;padding:34px 30px 38px;background:#F6F5F2;border-top:7px solid #12A9E0">
+        <span style="font:500 12px 'IBM Plex Mono',monospace;letter-spacing:.12em;color:#8A867E">04</span>
+        <h3 style="margin:0;font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:27px;line-height:1.1;letter-spacing:-.02em">Oficinas</h3>
+        <p style="margin:0;font-family:'Archivo',sans-serif;font-size:16.5px;line-height:1.55;color:#5A5D64;text-wrap:pretty">Atividades práticas e produtivas voltadas a jovens e adultos, com foco em autonomia, convivência e preparação para o trabalho.</p>
+      </article>
+      <article style="grid-column:span 3;display:flex;flex-direction:column;gap:14px;padding:34px 30px 38px;background:#F6F5F2;border-top:7px solid #2E9E63">
+        <span style="font:500 12px 'IBM Plex Mono',monospace;letter-spacing:.12em;color:#8A867E">05</span>
+        <h3 style="margin:0;font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:27px;line-height:1.1;letter-spacing:-.02em">Projetos complementares</h3>
+        <p style="margin:0;font-family:'Archivo',sans-serif;font-size:16.5px;line-height:1.55;color:#5A5D64;text-wrap:pretty">Programas de formação e apoio às famílias, entre eles a Escola de Pais, da UNIAPAE-MG.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="historia" style="background:#F6F5F2;border-top:1px solid #E2DFD8">
+  <div style="display:grid;grid-template-columns:.8fr 1.2fr;gap:64px;align-items:start;max-width:1240px;margin:0 auto;padding:100px 32px">
+    <div style="display:flex;flex-direction:column">
+      <span style="font:500 13px 'IBM Plex Mono',monospace;letter-spacing:.16em;color:#12A9E0;text-transform:uppercase">História</span>
+      <h2 style="margin:18px 0 0;font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:44px;line-height:1.05;letter-spacing:-.025em;text-wrap:pretty">Trinta e cinco anos de reconhecimento</h2>
+      <div style="display:flex;flex-direction:column;gap:12px;margin-top:32px">
+        <div style="display:flex;align-items:flex-end;justify-content:center;height:300px;padding:20px;background-color:#EFEDE7;background-image:repeating-linear-gradient(135deg,rgba(22,24,28,.06) 0 12px,transparent 12px 24px)">
+          <span style="font:500 12.5px 'IBM Plex Mono',monospace;letter-spacing:.1em;color:#8A867E;text-align:center;text-transform:uppercase">foto — fachada da sede</span>
+        </div>
+        <span style="font:500 11.5px 'IBM Plex Mono',monospace;letter-spacing:.06em;color:#9A968C">Rua Véu da Noiva, 62 — Extrema/MG.</span>
+      </div>
+    </div>
+    <div style="display:flex;flex-direction:column;padding-top:8px">
+      <div style="display:grid;grid-template-columns:104px 1fr;gap:28px;padding:24px 0;border-top:2px solid #16181C">
+        <span style="font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:26px;line-height:1;letter-spacing:-.02em;color:#E5006E">1991</span>
+        <span style="font-family:'Archivo',sans-serif;font-size:17.5px;line-height:1.5;color:#3A3D44;text-wrap:pretty">Fundação do CRIE por um grupo de cidadãos solidários, diante da falta de atendimento especializado na cidade.</span>
+      </div>
+      <div style="display:grid;grid-template-columns:104px 1fr;gap:28px;padding:24px 0;border-top:1px solid #DCD8D0">
+        <span style="font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:26px;line-height:1;letter-spacing:-.02em;color:#F2B300">2005</span>
+        <span style="font-family:'Archivo',sans-serif;font-size:17.5px;line-height:1.5;color:#3A3D44;text-wrap:pretty">Filiação à Federação das APAEs, integrando o movimento apaeano de Minas Gerais.</span>
+      </div>
+      <div style="display:grid;grid-template-columns:104px 1fr;gap:28px;padding:24px 0;border-top:1px solid #DCD8D0">
+        <span style="font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:26px;line-height:1;letter-spacing:-.02em;color:#8A21CE">2006</span>
+        <span style="font-family:'Archivo',sans-serif;font-size:17.5px;line-height:1.5;color:#3A3D44;text-wrap:pretty">Reconhecimento como entidade de utilidade pública estadual e inscrição no conselho nacional de assistência social.</span>
+      </div>
+      <div style="display:grid;grid-template-columns:104px 1fr;gap:28px;padding:24px 0;border-top:1px solid #DCD8D0">
+        <span style="font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:26px;line-height:1;letter-spacing:-.02em;color:#12A9E0">2007</span>
+        <span style="font-family:'Archivo',sans-serif;font-size:17.5px;line-height:1.5;color:#3A3D44;text-wrap:pretty">Título de Cidadão Honorário Extremense concedido à presidência e à direção da instituição.</span>
+      </div>
+      <div style="display:grid;grid-template-columns:104px 1fr;gap:28px;padding:24px 0;border-top:1px solid #DCD8D0">
+        <span style="font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:26px;line-height:1;letter-spacing:-.02em;color:#2E9E63">2010</span>
+        <span style="font-family:'Archivo',sans-serif;font-size:17.5px;line-height:1.5;color:#3A3D44;text-wrap:pretty">Reconhecimento como entidade de utilidade pública federal.</span>
+      </div>
+      <div style="display:grid;grid-template-columns:104px 1fr;gap:28px;padding:24px 0;border-top:1px solid #DCD8D0;border-bottom:2px solid #16181C">
+        <span style="font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:26px;line-height:1;letter-spacing:-.02em;color:#E5006E">2016</span>
+        <span style="font-family:'Archivo',sans-serif;font-size:17.5px;line-height:1.5;color:#3A3D44;text-wrap:pretty">Autorização para funcionar como Centro de Atendimento Educacional Especializado e Certificado de Entidade Beneficente de Assistência Social.</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<sc-if value="{{ showDepoimento }}" hint-placeholder-val="{{ true }}">
+  <section style="background:#8A21CE;color:#FFFFFF">
+    <div style="max-width:1240px;margin:0 auto;padding:96px 32px">
+      <span style="font:500 13px 'IBM Plex Mono',monospace;letter-spacing:.16em;color:#E7CBFA;text-transform:uppercase">Depoimentos</span>
+      <h2 style="margin:18px 0 40px;font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:40px;line-height:1.05;letter-spacing:-.025em;max-width:760px;text-wrap:pretty">Quem convive com o CRIE</h2>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:28px;align-items:start">
+        <figure style="display:flex;flex-direction:column;gap:24px;margin:0;padding:34px 32px;background:rgba(255,255,255,.12)">
+          <blockquote style="margin:0;font-family:'Bricolage Grotesque',sans-serif;font-weight:600;font-size:22px;line-height:1.32;letter-spacing:-.01em;text-wrap:pretty">“O CRIE é o lugar onde meu filho e outras crianças são cuidadas com muito amor e dedicação. Lugar abençoado!”</blockquote>
+          <figcaption style="display:flex;flex-direction:column;gap:4px;margin-top:auto;padding-top:20px;border-top:1px solid rgba(255,255,255,.28)">
+            <span style="font:500 12px 'IBM Plex Mono',monospace;letter-spacing:.12em;color:#FFFFFF;text-transform:uppercase">Terezinha</span>
+          </figcaption>
+        </figure>
+        <figure style="display:flex;flex-direction:column;gap:24px;margin:0;padding:34px 32px;background:rgba(255,255,255,.12)">
+          <blockquote style="margin:0;font-family:'Bricolage Grotesque',sans-serif;font-weight:600;font-size:22px;line-height:1.32;letter-spacing:-.01em;text-wrap:pretty">“O CRIE/APAE — para nós significa amor e esperança. A dedicação e o carinho fazem toda diferença no trabalho realizado… Anjos em forma de gente.”</blockquote>
+          <figcaption style="display:flex;flex-direction:column;gap:4px;margin-top:auto;padding-top:20px;border-top:1px solid rgba(255,255,255,.28)">
+            <span style="font:500 12px 'IBM Plex Mono',monospace;letter-spacing:.12em;color:#FFFFFF;text-transform:uppercase">Maraisa</span>
+            <span style="font-family:'Archivo',sans-serif;font-size:15.5px;color:#E7CBFA">Miguel Pedroso</span>
+          </figcaption>
+        </figure>
+        <figure style="display:flex;flex-direction:column;gap:24px;margin:0;padding:34px 32px;background:rgba(255,255,255,.12)">
+          <blockquote style="margin:0;font-family:'Bricolage Grotesque',sans-serif;font-weight:600;font-size:22px;line-height:1.32;letter-spacing:-.01em;text-wrap:pretty">“A Darly ama ir ao CRIE/APAE, nossa segunda família. Amor, dedicação, esforço, são muitos adjetivos. Deus abençoe a todos pelo esforço e dedicação com nossos filhos.”</blockquote>
+          <figcaption style="display:flex;flex-direction:column;gap:4px;margin-top:auto;padding-top:20px;border-top:1px solid rgba(255,255,255,.28)">
+            <span style="font:500 12px 'IBM Plex Mono',monospace;letter-spacing:.12em;color:#FFFFFF;text-transform:uppercase">Sidneia</span>
+            <span style="font-family:'Archivo',sans-serif;font-size:15.5px;color:#E7CBFA">mãe de Darly</span>
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+</sc-if>
+
+<section id="ajudar" style="background:#F6F5F2">
+  <div style="max-width:1240px;margin:0 auto;padding:100px 32px">
+    <span style="font:500 13px 'IBM Plex Mono',monospace;letter-spacing:.16em;color:#2E9E63;text-transform:uppercase">Como ajudar</span>
+    <h2 style="margin:18px 0 0;font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:44px;line-height:1.05;letter-spacing:-.025em;max-width:820px;text-wrap:pretty">O atendimento é gratuito — mas não é de graça</h2>
+    <p style="margin:18px 0 0;font-family:'Archivo',sans-serif;font-size:19px;line-height:1.55;color:#5A5D64;max-width:720px;text-wrap:pretty">Cada contribuição vira hora de terapia, material de oficina e transporte de quem mora longe.</p>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:56px;align-items:stretch">
+      <article style="display:flex;flex-direction:column;gap:16px;padding:40px 34px;background:#16181C;color:#F6F5F2">
+        <span style="font:500 12px 'IBM Plex Mono',monospace;letter-spacing:.12em;color:#F2B300">DOAÇÃO</span>
+        <h3 style="margin:0;font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:29px;line-height:1.08;letter-spacing:-.02em">Doe uma vez ou todo mês</h3>
+        <p style="margin:0;font-family:'Archivo',sans-serif;font-size:16.5px;line-height:1.55;color:#B9B5AC;text-wrap:pretty">A doação recorrente é a que mais ajuda: permite planejar o atendimento do ano inteiro.</p>
+        <div style="display:flex;flex-direction:column;gap:8px;margin-top:8px;padding-top:20px;border-top:1px solid #2A2D33">
+          <span style="font:500 12px 'IBM Plex Mono',monospace;color:#8C8880">CHAVE PIX</span>
+          <span style="font-family:'Archivo',sans-serif;font-weight:600;font-size:17px;color:#F6F5F2">[inserir chave Pix oficial]</span>
+        </div>
+        <a href="#contato" style="margin-top:auto;font-family:'Archivo',sans-serif;font-weight:600;font-size:16px;color:#16181C;background:#F2B300;padding:15px 26px;border-radius:2px;text-align:center" style-hover="background:#FFFFFF;color:#16181C">Quero doar</a>
+      </article>
+      <article style="display:flex;flex-direction:column;gap:16px;padding:40px 34px;background:#FFFFFF;border:1px solid #E2DFD8">
+        <span style="font:500 12px 'IBM Plex Mono',monospace;letter-spacing:.12em;color:#8A21CE">VOLUNTARIADO</span>
+        <h3 style="margin:0;font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:29px;line-height:1.08;letter-spacing:-.02em">Doe tempo e conhecimento</h3>
+        <p style="margin:0;font-family:'Archivo',sans-serif;font-size:16.5px;line-height:1.55;color:#5A5D64;text-wrap:pretty">Oficinas, eventos, manutenção, apoio administrativo. A conversa começa com uma visita à instituição.</p>
+        <a href="#contato" style="margin-top:auto;font-family:'Archivo',sans-serif;font-weight:600;font-size:16px;color:#16181C;padding:15px 26px;border:2px solid #16181C;border-radius:2px;text-align:center" style-hover="background:#16181C;color:#FFFFFF">Ser voluntário</a>
+      </article>
+      <article style="display:flex;flex-direction:column;gap:16px;padding:40px 34px;background:#FFFFFF;border:1px solid #E2DFD8">
+        <span style="font:500 12px 'IBM Plex Mono',monospace;letter-spacing:.12em;color:#12A9E0">EMPRESAS</span>
+        <h3 style="margin:0;font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:29px;line-height:1.08;letter-spacing:-.02em">Parceria institucional</h3>
+        <p style="margin:0;font-family:'Archivo',sans-serif;font-size:16.5px;line-height:1.55;color:#5A5D64;text-wrap:pretty">Patrocínio de projeto, doação de materiais ou cessão de serviços. O parque industrial de Extrema é vizinho — e pode ser parceiro.</p>
+        <a href="#contato" style="margin-top:auto;font-family:'Archivo',sans-serif;font-weight:600;font-size:16px;color:#16181C;padding:15px 26px;border:2px solid #16181C;border-radius:2px;text-align:center" style-hover="background:#16181C;color:#FFFFFF">Falar com a direção</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<sc-if value="{{ showTransparencia }}" hint-placeholder-val="{{ true }}">
+  <section style="background:#FFFFFF;border-top:1px solid #E2DFD8">
+    <div style="display:grid;grid-template-columns:.9fr 1.1fr;gap:64px;align-items:start;max-width:1240px;margin:0 auto;padding:96px 32px">
+      <div style="display:flex;flex-direction:column">
+        <span style="font:500 13px 'IBM Plex Mono',monospace;letter-spacing:.16em;color:#F2B300;text-transform:uppercase">Transparência</span>
+        <h2 style="margin:18px 0 0;font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:40px;line-height:1.05;letter-spacing:-.025em;text-wrap:pretty">Quem doa tem direito de ver</h2>
+        <p style="margin:18px 0 0;font-family:'Archivo',sans-serif;font-size:18px;line-height:1.55;color:#5A5D64;text-wrap:pretty">Documentos públicos da instituição, disponíveis para download.</p>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:0">
+        <a href="#" style="display:flex;align-items:center;justify-content:space-between;gap:24px;padding:22px 0;border-top:2px solid #E2DFD8;color:#16181C" style-hover="color:#E5006E">
+          <span style="font-family:'Archivo',sans-serif;font-weight:600;font-size:19px">Relatório anual de atividades</span>
+          <span style="font:500 12px 'IBM Plex Mono',monospace;letter-spacing:.1em;color:#8A867E">PDF</span>
+        </a>
+        <a href="#" style="display:flex;align-items:center;justify-content:space-between;gap:24px;padding:22px 0;border-top:1px solid #E2DFD8;color:#16181C" style-hover="color:#E5006E">
+          <span style="font-family:'Archivo',sans-serif;font-weight:600;font-size:19px">Demonstrativo financeiro</span>
+          <span style="font:500 12px 'IBM Plex Mono',monospace;letter-spacing:.1em;color:#8A867E">PDF</span>
+        </a>
+        <a href="#" style="display:flex;align-items:center;justify-content:space-between;gap:24px;padding:22px 0;border-top:1px solid #E2DFD8;color:#16181C" style-hover="color:#E5006E">
+          <span style="font-family:'Archivo',sans-serif;font-weight:600;font-size:19px">Estatuto social</span>
+          <span style="font:500 12px 'IBM Plex Mono',monospace;letter-spacing:.1em;color:#8A867E">PDF</span>
+        </a>
+        <a href="#" style="display:flex;align-items:center;justify-content:space-between;gap:24px;padding:22px 0;border-top:1px solid #E2DFD8;border-bottom:2px solid #E2DFD8;color:#16181C" style-hover="color:#E5006E">
+          <span style="font-family:'Archivo',sans-serif;font-weight:600;font-size:19px">Certidões, títulos e registros</span>
+          <span style="font:500 12px 'IBM Plex Mono',monospace;letter-spacing:.1em;color:#8A867E">PDF</span>
+        </a>
+        <span style="margin-top:16px;font:500 11.5px 'IBM Plex Mono',monospace;letter-spacing:.06em;color:#9A968C">Substituir por arquivos reais antes de publicar.</span>
+      </div>
+    </div>
+  </section>
+</sc-if>
+
+<sc-if value="{{ showParceiros }}" hint-placeholder-val="{{ true }}">
+  <section id="parceiros" style="background:#F6F5F2;border-top:1px solid #E2DFD8">
+    <div style="max-width:1240px;margin:0 auto;padding:96px 32px">
+      <div style="display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:24px">
+        <div style="display:flex;flex-direction:column">
+          <span style="font:500 13px 'IBM Plex Mono',monospace;letter-spacing:.16em;color:#12A9E0;text-transform:uppercase">Conheça nossos parceiros</span>
+          <h2 style="margin:18px 0 0;font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:40px;line-height:1.05;letter-spacing:-.025em;max-width:640px;text-wrap:pretty">Quem sustenta o atendimento junto com a gente</h2>
+        </div>
+        <a href="#ajudar" style="font-family:'Archivo',sans-serif;font-weight:600;font-size:16px;color:#16181C;padding:14px 26px;border:2px solid #16181C;border-radius:2px" style-hover="background:#16181C;color:#FFFFFF">Sua empresa aqui</a>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:16px;margin-top:48px">
+        <span style="display:flex;align-items:center;justify-content:center;min-height:96px;padding:18px 16px;background:#FFFFFF;border:1px solid #E2DFD8;font-family:'Archivo',sans-serif;font-weight:600;font-size:16px;line-height:1.25;color:#3A3D44;text-align:center;text-wrap:pretty">Prefeitura de Extrema</span>
+        <span style="display:flex;align-items:center;justify-content:center;min-height:96px;padding:18px 16px;background:#FFFFFF;border:1px solid #E2DFD8;font-family:'Archivo',sans-serif;font-weight:600;font-size:16px;line-height:1.25;color:#3A3D44;text-align:center;text-wrap:pretty">Grupo Energisa</span>
+        <span style="display:flex;align-items:center;justify-content:center;min-height:96px;padding:18px 16px;background:#FFFFFF;border:1px solid #E2DFD8;font-family:'Archivo',sans-serif;font-weight:600;font-size:16px;line-height:1.25;color:#3A3D44;text-align:center;text-wrap:pretty">Pandurata Alimentos</span>
+        <span style="display:flex;align-items:center;justify-content:center;min-height:96px;padding:18px 16px;background:#FFFFFF;border:1px solid #E2DFD8;font-family:'Archivo',sans-serif;font-weight:600;font-size:16px;line-height:1.25;color:#3A3D44;text-align:center;text-wrap:pretty">Extremamedic Planos de Saúde</span>
+        <span style="display:flex;align-items:center;justify-content:center;min-height:96px;padding:18px 16px;background:#FFFFFF;border:1px solid #E2DFD8;font-family:'Archivo',sans-serif;font-weight:600;font-size:16px;line-height:1.25;color:#3A3D44;text-align:center;text-wrap:pretty">MPTran Clínica Médica e Psicológica</span>
+        <span style="display:flex;align-items:center;justify-content:center;min-height:96px;padding:18px 16px;background:#FFFFFF;border:1px solid #E2DFD8;font-family:'Archivo',sans-serif;font-weight:600;font-size:16px;line-height:1.25;color:#3A3D44;text-align:center;text-wrap:pretty">Dello</span>
+        <span style="display:flex;align-items:center;justify-content:center;min-height:96px;padding:18px 16px;background:#FFFFFF;border:1px solid #E2DFD8;font-family:'Archivo',sans-serif;font-weight:600;font-size:16px;line-height:1.25;color:#3A3D44;text-align:center;text-wrap:pretty">Jofpar</span>
+        <span style="display:flex;align-items:center;justify-content:center;min-height:96px;padding:18px 16px;background:#FFFFFF;border:1px solid #E2DFD8;font-family:'Archivo',sans-serif;font-weight:600;font-size:16px;line-height:1.25;color:#3A3D44;text-align:center;text-wrap:pretty">Frum</span>
+        <span style="display:flex;align-items:center;justify-content:center;min-height:96px;padding:18px 16px;background:#FFFFFF;border:1px solid #E2DFD8;font-family:'Archivo',sans-serif;font-weight:600;font-size:16px;line-height:1.25;color:#3A3D44;text-align:center;text-wrap:pretty">Viro Aço</span>
+        <span style="display:flex;align-items:center;justify-content:center;min-height:96px;padding:18px 16px;background:#FFFFFF;border:1px solid #E2DFD8;font-family:'Archivo',sans-serif;font-weight:600;font-size:16px;line-height:1.25;color:#3A3D44;text-align:center;text-wrap:pretty">Eletan Materiais Elétricos</span>
+        <span style="display:flex;align-items:center;justify-content:center;min-height:96px;padding:18px 16px;background:#FFFFFF;border:1px solid #E2DFD8;font-family:'Archivo',sans-serif;font-weight:600;font-size:16px;line-height:1.25;color:#3A3D44;text-align:center;text-wrap:pretty">Force Line</span>
+        <span style="display:flex;align-items:center;justify-content:center;min-height:96px;padding:18px 16px;background:#FFFFFF;border:1px solid #E2DFD8;font-family:'Archivo',sans-serif;font-weight:600;font-size:16px;line-height:1.25;color:#3A3D44;text-align:center;text-wrap:pretty">Poli Sopro</span>
+        <span style="display:flex;align-items:center;justify-content:center;min-height:96px;padding:18px 16px;background:#FFFFFF;border:1px solid #E2DFD8;font-family:'Archivo',sans-serif;font-weight:600;font-size:16px;line-height:1.25;color:#3A3D44;text-align:center;text-wrap:pretty">MW Auto Peças e Mecânica Waltão</span>
+        <span style="display:flex;align-items:center;justify-content:center;min-height:96px;padding:18px 16px;background:#FFFFFF;border:1px solid #E2DFD8;font-family:'Archivo',sans-serif;font-weight:600;font-size:16px;line-height:1.25;color:#3A3D44;text-align:center;text-wrap:pretty">Cadabra Publicidade</span>
+        <span style="display:flex;align-items:center;justify-content:center;min-height:96px;padding:18px 16px;background:#FFFFFF;border:1px solid #E2DFD8;font-family:'Archivo',sans-serif;font-weight:600;font-size:16px;line-height:1.25;color:#3A3D44;text-align:center;text-wrap:pretty">Musical Box</span>
+      </div>
+      <span style="display:block;margin-top:20px;font:500 11.5px 'IBM Plex Mono',monospace;letter-spacing:.06em;color:#9A968C">Placas tipográficas provisórias — enviar os arquivos de logotipo dos parceiros para substituição.</span>
+    </div>
+  </section>
+</sc-if>
+
+<section id="contato" style="background:#0E1013;color:#F6F5F2">
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:72px;max-width:1240px;margin:0 auto;padding:100px 32px">
+    <div style="display:flex;flex-direction:column">
+      <span style="font:500 13px 'IBM Plex Mono',monospace;letter-spacing:.16em;color:#F2B300;text-transform:uppercase">Contato</span>
+      <h2 style="margin:18px 0 0;font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:44px;line-height:1.05;letter-spacing:-.025em;text-wrap:pretty">Venha conhecer o CRIE</h2>
+      <p style="margin:20px 0 0;font-family:'Archivo',sans-serif;font-size:19px;line-height:1.55;color:#B9B5AC;max-width:520px;text-wrap:pretty">Famílias, voluntários e empresas: a porta está aberta. Agende uma visita e converse com a equipe.</p>
+      <div style="display:flex;flex-direction:column;gap:24px;margin-top:44px">
+        <div style="display:flex;flex-direction:column;gap:6px">
+          <span style="font:500 12px 'IBM Plex Mono',monospace;letter-spacing:.12em;color:#6E6A63">ENDEREÇO</span>
+          <span style="font-family:'Archivo',sans-serif;font-size:18px;color:#F6F5F2">Rua Véu da Noiva, 62 · Extrema, MG</span>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:6px">
+          <span style="font:500 12px 'IBM Plex Mono',monospace;letter-spacing:.12em;color:#6E6A63">TELEFONE E WHATSAPP</span>
+          <a href="tel:+5535984235789" style="font-family:'Archivo',sans-serif;font-size:18px;color:#F6F5F2" style-hover="color:#F2B300">(35) 98423-5789</a>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:6px">
+          <span style="font:500 12px 'IBM Plex Mono',monospace;letter-spacing:.12em;color:#6E6A63">E-MAIL</span>
+          <a href="mailto:crieespecial@yahoo.com.br" style="font-family:'Archivo',sans-serif;font-size:18px;color:#F6F5F2" style-hover="color:#F2B300">crieespecial@yahoo.com.br</a>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:6px">
+          <span style="font:500 12px 'IBM Plex Mono',monospace;letter-spacing:.12em;color:#6E6A63">REDES</span>
+          <a href="https://www.facebook.com/crieespecial" style="font-family:'Archivo',sans-serif;font-size:18px;color:#F6F5F2" style-hover="color:#F2B300">facebook.com/crieespecial</a>
+        </div>
+      </div>
+    </div>
+    <form onSubmit="{{ onSubmit }}" style="display:flex;flex-direction:column;gap:20px;padding:44px 40px;background:#16181C">
+      <span style="font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:26px;line-height:1.1;letter-spacing:-.02em">Mande uma mensagem</span>
+      <label style="display:flex;flex-direction:column;gap:8px">
+        <span style="font:500 12px 'IBM Plex Mono',monospace;letter-spacing:.1em;color:#8C8880">NOME</span>
+        <input type="text" name="nome" placeholder="Seu nome completo" style="font-family:'Archivo',sans-serif;font-size:17px;color:#F6F5F2;background:#0E1013;border:1px solid #2A2D33;border-radius:2px;padding:15px 16px;min-height:52px" style-focus="border-color:#12A9E0;outline:none">
+      </label>
+      <label style="display:flex;flex-direction:column;gap:8px">
+        <span style="font:500 12px 'IBM Plex Mono',monospace;letter-spacing:.1em;color:#8C8880">E-MAIL OU TELEFONE</span>
+        <input type="text" name="contato" placeholder="Como podemos responder" style="font-family:'Archivo',sans-serif;font-size:17px;color:#F6F5F2;background:#0E1013;border:1px solid #2A2D33;border-radius:2px;padding:15px 16px;min-height:52px" style-focus="border-color:#12A9E0;outline:none">
+      </label>
+      <label style="display:flex;flex-direction:column;gap:8px">
+        <span style="font:500 12px 'IBM Plex Mono',monospace;letter-spacing:.1em;color:#8C8880">ASSUNTO</span>
+        <select name="assunto" style="font-family:'Archivo',sans-serif;font-size:17px;color:#F6F5F2;background:#0E1013;border:1px solid #2A2D33;border-radius:2px;padding:15px 16px;min-height:52px" style-focus="border-color:#12A9E0;outline:none">
+          <option>Sou família e quero atendimento</option>
+          <option>Quero doar</option>
+          <option>Quero ser voluntário</option>
+          <option>Sou empresa e quero apoiar</option>
+          <option>Outro assunto</option>
+        </select>
+      </label>
+      <label style="display:flex;flex-direction:column;gap:8px">
+        <span style="font:500 12px 'IBM Plex Mono',monospace;letter-spacing:.1em;color:#8C8880">MENSAGEM</span>
+        <textarea name="mensagem" rows="4" placeholder="Escreva aqui" style="font-family:'Archivo',sans-serif;font-size:17px;line-height:1.5;color:#F6F5F2;background:#0E1013;border:1px solid #2A2D33;border-radius:2px;padding:15px 16px;resize:vertical" style-focus="border-color:#12A9E0;outline:none"></textarea>
+      </label>
+      <button type="submit" style="font-family:'Archivo',sans-serif;font-weight:600;font-size:17px;color:#16181C;background:#F2B300;border:none;border-radius:2px;padding:17px 24px;min-height:54px;cursor:pointer" style-hover="background:#FFFFFF">{{ botaoLabel }}</button>
+      <span style="font-family:'Archivo',sans-serif;font-size:14.5px;line-height:1.45;color:#8C8880;text-wrap:pretty">Formulário de demonstração — conectar a um e-mail ou serviço de envio antes de publicar.</span>
+    </form>
+  </div>
+</section>
+
+<footer style="background:#16181C;color:#8C8880;border-top:1px solid #2A2D33">
+  <div style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:28px;max-width:1240px;margin:0 auto;padding:44px 32px">
+    <div style="display:flex;align-items:center;gap:18px">
+      <span style="display:flex;align-items:center;justify-content:center;padding:10px 14px;background:#F6F5F2;border-radius:4px;flex:none">
+        <img src="assets/crie-logo-oficial.png" alt="CRIE — Centro de Integração Especial" style="width:96px;height:45px;object-fit:contain;display:block">
+      </span>
+      <span style="font-family:'Archivo',sans-serif;font-size:15.5px;line-height:1.45;color:#8C8880">CRIE — Centro de Integração Especial<br>Rua Véu da Noiva, 62 · Extrema, MG · Desde 1991</span>
+    </div>
+    <div style="display:flex;flex-wrap:wrap;gap:26px">
+      <a href="#quem-somos" style="font-family:'Archivo',sans-serif;font-size:15.5px;color:#8C8880" style-hover="color:#F6F5F2">Quem somos</a>
+      <a href="#atuacao" style="font-family:'Archivo',sans-serif;font-size:15.5px;color:#8C8880" style-hover="color:#F6F5F2">Áreas de atuação</a>
+      <a href="#historia" style="font-family:'Archivo',sans-serif;font-size:15.5px;color:#8C8880" style-hover="color:#F6F5F2">História</a>
+      <a href="#ajudar" style="font-family:'Archivo',sans-serif;font-size:15.5px;color:#8C8880" style-hover="color:#F6F5F2">Como ajudar</a>
+      <a href="#contato" style="font-family:'Archivo',sans-serif;font-size:15.5px;color:#8C8880" style-hover="color:#F6F5F2">Contato</a>
+    </div>
+  </div>
+</footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;showTopBar&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Seções&quot;},&quot;showDepoimento&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Seções&quot;},&quot;showTransparencia&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Seções&quot;},&quot;showParceiros&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Seções&quot;},&quot;botaoLabel&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;Enviar mensagem&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Formulário&quot;}}">
+class Component extends DCLogic {
+  renderVals() {
+    return {
+      showTopBar: this.props.showTopBar ?? true,
+      showDepoimento: this.props.showDepoimento ?? true,
+      showTransparencia: this.props.showTransparencia ?? true,
+      showParceiros: this.props.showParceiros ?? true,
+      botaoLabel: this.props.botaoLabel ?? "Enviar mensagem",
+      onSubmit: (e) => e.preventDefault(),
+    };
+  }
+}
+</script>
+</body>
+</html>

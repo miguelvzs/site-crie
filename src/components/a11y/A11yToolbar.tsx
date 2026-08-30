@@ -43,7 +43,7 @@ export function A11yToolbar() {
   }
 
   const btnClass =
-    "rounded-lg border border-black/20 px-2 py-1 text-sm font-semibold hover:bg-black/5 focus-visible:outline focus-visible:outline-4 focus-visible:outline-offset-2 focus-visible:outline-brand-purple";
+    "rounded-[2px] border border-white/50 px-2 py-1 font-mono text-xs font-medium text-white transition-colors duration-150 hover:bg-white hover:text-magenta";
 
   return (
     <div className="flex items-center gap-1" role="group" aria-label="Controles de acessibilidade">

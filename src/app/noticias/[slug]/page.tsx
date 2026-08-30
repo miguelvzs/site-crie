@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import type { ComponentType } from "react";
 import { notFound } from "next/navigation";
-import { Section } from "@/components/ui/Section";
+import { Container } from "@/components/ui/primitives";
 import { getPostSlugs, getPostMeta } from "@/lib/posts";
 
 export function generateStaticParams() {
@@ -39,8 +39,8 @@ export default async function NoticiaPost({ params }: { params: Promise<{ slug: 
   const { meta, Post } = loaded;
 
   return (
-    <Section className="pt-16 sm:pt-24 max-w-3xl">
-      <p className="text-sm text-foreground/60 mb-2">
+    <Container className="max-w-[820px] py-24">
+      <p className="m-0 mb-3 font-mono text-xs font-medium tracking-[.12em] text-mute-400">
         <time dateTime={meta.date}>
           {new Date(meta.date).toLocaleDateString("pt-BR", { dateStyle: "long" })}
         </time>
@@ -48,6 +48,6 @@ export default async function NoticiaPost({ params }: { params: Promise<{ slug: 
       <article>
         <Post />
       </article>
-    </Section>
+    </Container>
   );
 }
