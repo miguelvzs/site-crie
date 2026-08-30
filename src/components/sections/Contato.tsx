@@ -14,10 +14,10 @@ export function Contato() {
       <Container className="grid gap-[72px] py-[100px] lg:grid-cols-2">
         <div className="flex flex-col">
           <Eyebrow color="var(--amarelo)">{contato.eyebrow}</Eyebrow>
-          <h2 className="m-0 mt-[18px] font-display text-[32px] font-extrabold leading-[1.05] tracking-[-.025em] text-pretty sm:text-[44px]">
+          <h2 className="m-0 mt-[18px] font-display text-[2rem] font-extrabold leading-[1.05] tracking-[-.025em] text-pretty sm:text-[2.75rem]">
             {contato.titulo}
           </h2>
-          <p className="m-0 mt-5 max-w-[520px] text-[19px] leading-[1.55] text-body-dark text-pretty">
+          <p className="m-0 mt-5 max-w-[520px] text-[1.1875rem] leading-[1.55] text-body-dark text-pretty">
             {contato.paragrafo}
           </p>
 

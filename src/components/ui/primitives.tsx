@@ -10,7 +10,7 @@ export function Container({ children, className = "" }: { children: ReactNode; c
 export function Eyebrow({ children, color }: { children: ReactNode; color: string }) {
   return (
     <span
-      className="font-mono text-[13px] font-medium uppercase tracking-[.16em]"
+      className="font-mono text-[0.8125rem] font-medium uppercase tracking-[.16em]"
       style={{ color }}
     >
       {children}
@@ -51,7 +51,7 @@ export function Foto({
       </div>
       {nota && (
         <figcaption
-          className="font-mono text-[11.5px] font-medium tracking-[.06em]"
+          className="font-mono text-[0.71875rem] font-medium tracking-[.06em]"
           style={{ color: isDark ? "var(--mute-600)" : "var(--mute-450)" }}
         >
           {nota}

@@ -6,6 +6,7 @@ import { TopBar } from "@/components/sections/TopBar";
 import { Header } from "@/components/sections/Header";
 import { Footer } from "@/components/sections/Footer";
 import { VLibrasWidget } from "@/components/a11y/VLibrasWidget";
+import { PREFS_SCRIPT } from "@/components/a11y/a11y-prefs";
 import { OrganizationJsonLd } from "@/components/seo/OrganizationJsonLd";
 import { SITE_URL } from "@/lib/site-url";
 import content from "@content/landing.json";
@@ -53,6 +54,9 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       lang="pt-BR"
       className={`${bricolage.variable} ${archivo.variable} ${plexMono.variable}`}
     >
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: PREFS_SCRIPT }} />
+      </head>
       <body className="flex min-h-full flex-col">
         <OrganizationJsonLd />
         <SkipLink />

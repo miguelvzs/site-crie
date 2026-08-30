@@ -12,7 +12,7 @@ export function Transparencia() {
       <Container className="grid items-start gap-16 py-24 lg:grid-cols-[.9fr_1.1fr]">
         <div className="flex flex-col">
           <Eyebrow color="var(--amarelo)">{transparencia.eyebrow}</Eyebrow>
-          <h2 className="m-0 mt-[18px] font-display text-[30px] font-extrabold leading-[1.05] tracking-[-.025em] text-pretty sm:text-[40px]">
+          <h2 className="m-0 mt-[18px] font-display text-[1.875rem] font-extrabold leading-[1.05] tracking-[-.025em] text-pretty sm:text-[2.5rem]">
             {transparencia.titulo}
           </h2>
           <p className="m-0 mt-[18px] text-lg leading-[1.55] text-slate-400 text-pretty">
@@ -30,12 +30,12 @@ export function Transparencia() {
               <li key={doc.titulo}>
                 {doc.url ? (
                   <a href={doc.url} className={`${linhas} text-ink-800 transition-colors duration-150 hover:text-magenta`}>
-                    <span className="text-[19px] font-semibold">{doc.titulo}</span>
+                    <span className="text-[1.1875rem] font-semibold">{doc.titulo}</span>
                     <span className="font-mono text-xs font-medium tracking-[.1em] text-mute-400">PDF</span>
                   </a>
                 ) : (
                   <div className={`${linhas} text-ink-800`}>
-                    <span className="text-[19px] font-semibold">{doc.titulo}</span>
+                    <span className="text-[1.1875rem] font-semibold">{doc.titulo}</span>
                     <span className="font-mono text-xs font-medium tracking-[.1em] text-mute-400">
                       em breve
                     </span>
@@ -47,7 +47,7 @@ export function Transparencia() {
         </ul>
 
         {!temDocumento && (
-          <span className="font-mono text-[11.5px] font-medium tracking-[.06em] text-mute-450 lg:col-start-2">
+          <span className="font-mono text-[0.71875rem] font-medium tracking-[.06em] text-mute-450 lg:col-start-2">
             Documentos ainda não enviados pela instituição — publicar os PDFs reais antes de divulgar o site.
           </span>
         )}

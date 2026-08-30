@@ -1,13 +1,26 @@
 "use client";
 
 import Image from "next/image";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Container } from "@/components/ui/primitives";
 import content from "@content/landing.json";
 
 export function Header() {
   const [open, setOpen] = useState(false);
+  const botaoRef = useRef<HTMLButtonElement>(null);
   const { org, nav } = content;
+
+  // Esc fecha o menu e devolve o foco ao botão que o abriu (WCAG 2.1.2).
+  useEffect(() => {
+    if (!open) return;
+    function onKeyDown(e: KeyboardEvent) {
+      if (e.key !== "Escape") return;
+      setOpen(false);
+      botaoRef.current?.focus();
+    }
+    document.addEventListener("keydown", onKeyDown);
+    return () => document.removeEventListener("keydown", onKeyDown);
+  }, [open]);
 
   return (
     <header className="sticky top-0 z-50 border-b border-line-200 bg-warm-100/93 backdrop-blur-[12px]">
@@ -22,12 +35,12 @@ export function Header() {
             className="h-[55px] w-[118px] object-contain"
           />
           <span className="hidden flex-col gap-[3px] border-l border-line-300 pl-4 sm:flex">
-            <span className="text-[13.5px] font-semibold leading-[1.25] text-ink-500">
+            <span className="text-[0.84375rem] font-semibold leading-[1.25] text-ink-500">
               {org.lockupLinha1}
               <br />
               {org.lockupLinha2}
             </span>
-            <span className="font-mono text-[10px] font-medium tracking-[.1em] text-mute-400">
+            <span className="font-mono text-[0.625rem] font-medium tracking-[.1em] text-mute-400">
               {org.lockupLocal}
             </span>
           </span>
@@ -61,6 +74,7 @@ export function Header() {
 
         <button
           type="button"
+          ref={botaoRef}
           aria-expanded={open}
           aria-controls="nav-principal"
           onClick={() => setOpen((v) => !v)}

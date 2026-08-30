@@ -8,10 +8,10 @@ export function Atuacao() {
     <section id="atuacao" className="border-t border-line-200 bg-white">
       <Container className="py-[100px]">
         <Eyebrow color="var(--magenta)">{atuacao.eyebrow}</Eyebrow>
-        <h2 className="m-0 mt-[18px] max-w-[820px] font-display text-[32px] font-extrabold leading-[1.05] tracking-[-.025em] text-pretty sm:text-[44px]">
+        <h2 className="m-0 mt-[18px] max-w-[820px] font-display text-[2rem] font-extrabold leading-[1.05] tracking-[-.025em] text-pretty sm:text-[2.75rem]">
           {atuacao.titulo}
         </h2>
-        <p className="m-0 mt-[18px] max-w-[720px] text-[19px] leading-[1.55] text-slate-400 text-pretty">
+        <p className="m-0 mt-[18px] max-w-[720px] text-[1.1875rem] leading-[1.55] text-slate-400 text-pretty">
           {atuacao.paragrafo}
         </p>
 
@@ -27,10 +27,10 @@ export function Atuacao() {
               <span className="font-mono text-xs font-medium tracking-[.12em] text-mute-400">
                 {card.numero}
               </span>
-              <h3 className="m-0 font-display text-[27px] font-extrabold leading-[1.1] tracking-[-.02em]">
+              <h3 className="m-0 font-display text-[1.6875rem] font-extrabold leading-[1.1] tracking-[-.02em]">
                 {card.titulo}
               </h3>
-              <p className="m-0 text-[16.5px] leading-[1.55] text-slate-400 text-pretty">
+              <p className="m-0 text-[1.03125rem] leading-[1.55] text-slate-400 text-pretty">
                 {card.corpo}
               </p>
             </article>

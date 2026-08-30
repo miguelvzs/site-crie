@@ -8,10 +8,10 @@ export function Ajudar() {
     <section id="ajudar" className="bg-warm-100">
       <Container className="py-[100px]">
         <Eyebrow color="var(--verde)">{ajudar.eyebrow}</Eyebrow>
-        <h2 className="m-0 mt-[18px] max-w-[820px] font-display text-[32px] font-extrabold leading-[1.05] tracking-[-.025em] text-pretty sm:text-[44px]">
+        <h2 className="m-0 mt-[18px] max-w-[820px] font-display text-[2rem] font-extrabold leading-[1.05] tracking-[-.025em] text-pretty sm:text-[2.75rem]">
           {ajudar.titulo}
         </h2>
-        <p className="m-0 mt-[18px] max-w-[720px] text-[19px] leading-[1.55] text-slate-400 text-pretty">
+        <p className="m-0 mt-[18px] max-w-[720px] text-[1.1875rem] leading-[1.55] text-slate-400 text-pretty">
           {ajudar.paragrafo}
         </p>
 
@@ -31,11 +31,11 @@ export function Ajudar() {
               >
                 {card.kicker}
               </span>
-              <h3 className="m-0 font-display text-[29px] font-extrabold leading-[1.08] tracking-[-.02em]">
+              <h3 className="m-0 font-display text-[1.8125rem] font-extrabold leading-[1.08] tracking-[-.02em]">
                 {card.titulo}
               </h3>
               <p
-                className={`m-0 text-[16.5px] leading-[1.55] text-pretty ${
+                className={`m-0 text-[1.03125rem] leading-[1.55] text-pretty ${
                   card.destaque ? "text-body-dark" : "text-slate-400"
                 }`}
               >
@@ -46,9 +46,9 @@ export function Ajudar() {
                 <div className="mt-2 flex flex-col gap-2 border-t border-ink-600 pt-5">
                   <span className="font-mono text-xs font-medium text-mute-500">CHAVE PIX</span>
                   {ajudar.chavePix ? (
-                    <span className="text-[17px] font-semibold text-warm-100">{ajudar.chavePix}</span>
+                    <span className="text-[1.0625rem] font-semibold text-warm-100">{ajudar.chavePix}</span>
                   ) : (
-                    <span className="text-[15px] italic text-mute-500">
+                    <span className="text-[0.9375rem] italic text-mute-500">
                       [pendente: chave Pix oficial não publicada até confirmação da direção]
                     </span>
                   )}

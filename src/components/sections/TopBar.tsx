@@ -10,10 +10,10 @@ export function TopBar() {
       <span className="font-mono text-xs font-medium uppercase tracking-[.14em]">
         {topBar.eyebrow}
       </span>
-      <span className="text-[15px]">{topBar.frase}</span>
+      <span className="text-[0.9375rem]">{topBar.frase}</span>
       <a
         href="#ajudar"
-        className="border-b-2 border-white/50 text-[15px] font-semibold text-white transition-colors duration-150 hover:border-white"
+        className="border-b-2 border-white/50 text-[0.9375rem] font-semibold text-white transition-colors duration-150 hover:border-white"
       >
         {topBar.cta}
       </a>

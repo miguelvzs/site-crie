@@ -12,7 +12,7 @@ export function Historia() {
       <Container className="grid items-start gap-16 py-[100px] lg:grid-cols-[.8fr_1.2fr]">
         <div className="flex flex-col">
           <Eyebrow color="var(--ciano)">{historia.eyebrow}</Eyebrow>
-          <h2 className="m-0 mt-[18px] font-display text-[32px] font-extrabold leading-[1.05] tracking-[-.025em] text-pretty sm:text-[44px]">
+          <h2 className="m-0 mt-[18px] font-display text-[2rem] font-extrabold leading-[1.05] tracking-[-.025em] text-pretty sm:text-[2.75rem]">
             {titulo}
           </h2>
           <div className="mt-8">
@@ -35,12 +35,12 @@ export function Historia() {
               } ${i === historia.marcos.length - 1 ? "border-b-2 border-b-ink-800" : ""}`}
             >
               <span
-                className="font-display text-[26px] font-extrabold leading-none tracking-[-.02em]"
+                className="font-display text-[1.625rem] font-extrabold leading-none tracking-[-.02em]"
                 style={{ color: marco.cor }}
               >
                 {marco.ano}
               </span>
-              <span className="text-[17.5px] leading-[1.5] text-ink-500 text-pretty">
+              <span className="text-[1.09375rem] leading-[1.5] text-ink-500 text-pretty">
                 {marco.texto}
               </span>
             </li>

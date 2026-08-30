@@ -14,7 +14,7 @@ export default async function Noticias() {
   return (
     <Container className="py-24">
       <Eyebrow color="var(--magenta)">Notícias</Eyebrow>
-      <h1 className="m-0 mt-[18px] font-display text-[32px] font-extrabold leading-[1.05] tracking-[-.025em] text-pretty sm:text-[44px]">
+      <h1 className="m-0 mt-[18px] font-display text-[2rem] font-extrabold leading-[1.05] tracking-[-.025em] text-pretty sm:text-[2.75rem]">
         O que acontece no CRIE
       </h1>
 
@@ -29,7 +29,7 @@ export default async function Noticias() {
                 {new Date(post.date).toLocaleDateString("pt-BR", { dateStyle: "long" })}
               </time>
             </span>
-            <h2 className="m-0 font-display text-[27px] font-extrabold leading-[1.1] tracking-[-.02em]">
+            <h2 className="m-0 font-display text-[1.6875rem] font-extrabold leading-[1.1] tracking-[-.02em]">
               <Link
                 href={`/noticias/${post.slug}`}
                 className="text-ink-800 transition-colors duration-150 hover:text-magenta"
@@ -37,7 +37,7 @@ export default async function Noticias() {
                 {post.title}
               </Link>
             </h2>
-            <p className="m-0 text-[16.5px] leading-[1.55] text-slate-400 text-pretty">
+            <p className="m-0 text-[1.03125rem] leading-[1.55] text-slate-400 text-pretty">
               {post.excerpt}
             </p>
           </li>

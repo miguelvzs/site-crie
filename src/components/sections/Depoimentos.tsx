@@ -10,7 +10,7 @@ export function Depoimentos() {
     <section className="bg-roxo text-white">
       <Container className="py-24">
         <Eyebrow color="var(--roxo-claro)">{depoimentos.eyebrow}</Eyebrow>
-        <h2 className="mb-10 mt-[18px] max-w-[760px] font-display text-[30px] font-extrabold leading-[1.05] tracking-[-.025em] text-pretty sm:text-[40px]">
+        <h2 className="mb-10 mt-[18px] max-w-[760px] font-display text-[1.875rem] font-extrabold leading-[1.05] tracking-[-.025em] text-pretty sm:text-[2.5rem]">
           {depoimentos.titulo}
         </h2>
         <div className="grid items-stretch gap-7 sm:grid-cols-2 lg:grid-cols-3">
@@ -19,7 +19,7 @@ export function Depoimentos() {
               key={item.nome}
               className="m-0 flex flex-col gap-6 bg-white/12 px-8 py-[34px]"
             >
-              <blockquote className="m-0 font-display text-[22px] font-semibold leading-[1.32] tracking-[-.01em] text-pretty">
+              <blockquote className="m-0 font-display text-[1.375rem] font-semibold leading-[1.32] tracking-[-.01em] text-pretty">
                 &ldquo;{item.citacao}&rdquo;
               </blockquote>
               <figcaption className="mt-auto flex flex-col gap-1 border-t border-white/28 pt-5">
@@ -27,7 +27,7 @@ export function Depoimentos() {
                   {item.nome}
                 </span>
                 {item.relacao && (
-                  <span className="text-[15.5px] text-roxo-claro">{item.relacao}</span>
+                  <span className="text-[0.96875rem] text-roxo-claro">{item.relacao}</span>
                 )}
               </figcaption>
             </figure>

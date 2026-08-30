@@ -6,7 +6,7 @@ import content from "@content/landing.json";
 type Estado = "idle" | "submitting" | "success" | "error";
 
 const campoClasses =
-  "min-h-[52px] rounded-[2px] border border-ink-600 bg-ink-900 px-4 py-[15px] text-[17px] text-warm-100 placeholder:text-mute-600 focus:border-ciano";
+  "min-h-[52px] rounded-[2px] border border-ink-600 bg-ink-900 px-4 py-[15px] text-[1.0625rem] text-warm-100 placeholder:text-mute-600 focus:border-ciano";
 
 const labelClasses = "font-mono text-xs font-medium tracking-[.1em] text-mute-500";
 
@@ -47,7 +47,7 @@ export function ContatoForm() {
 
   return (
     <form onSubmit={handleSubmit} className="flex flex-col gap-5 bg-ink-800 px-10 py-11">
-      <h3 className="m-0 font-display text-[26px] font-extrabold leading-[1.1] tracking-[-.02em]">
+      <h3 className="m-0 font-display text-[1.625rem] font-extrabold leading-[1.1] tracking-[-.02em]">
         {formulario.titulo}
       </h3>
 
@@ -103,7 +103,7 @@ export function ContatoForm() {
         />
       </label>
 
-      <label htmlFor="consentimento" className="flex items-start gap-3 text-[14.5px] leading-[1.45] text-mute-500">
+      <label htmlFor="consentimento" className="flex items-start gap-3 text-[0.90625rem] leading-[1.45] text-mute-500">
         <input
           id="consentimento"
           name="consentimento"
@@ -120,12 +120,12 @@ export function ContatoForm() {
       <button
         type="submit"
         disabled={estado === "submitting"}
-        className="min-h-[54px] rounded-[2px] bg-amarelo px-6 py-[17px] text-[17px] font-semibold text-ink-800 transition-colors duration-150 hover:bg-white disabled:cursor-not-allowed disabled:opacity-70"
+        className="min-h-[54px] rounded-[2px] bg-amarelo px-6 py-[17px] text-[1.0625rem] font-semibold text-ink-800 transition-colors duration-150 hover:bg-white disabled:cursor-not-allowed disabled:opacity-70"
       >
         {estado === "submitting" ? "Enviando…" : formulario.botaoLabel}
       </button>
 
-      <p aria-live="polite" className="m-0 text-[14.5px] leading-[1.45] text-pretty">
+      <p aria-live="polite" className="m-0 text-[0.90625rem] leading-[1.45] text-pretty">
         {estado === "success" && (
           <span className="text-amarelo">
             Mensagem enviada. A equipe responde pelo contato informado.

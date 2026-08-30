@@ -15,7 +15,7 @@ export function Parceiros() {
         <div className="flex flex-wrap items-end justify-between gap-6">
           <div className="flex flex-col">
             <Eyebrow color="var(--ciano)">{parceiros.eyebrow}</Eyebrow>
-            <h2 className="m-0 mt-[18px] max-w-[640px] font-display text-[30px] font-extrabold leading-[1.05] tracking-[-.025em] text-pretty sm:text-[40px]">
+            <h2 className="m-0 mt-[18px] max-w-[640px] font-display text-[1.875rem] font-extrabold leading-[1.05] tracking-[-.025em] text-pretty sm:text-[2.5rem]">
               {parceiros.titulo}
             </h2>
           </div>
@@ -49,7 +49,7 @@ export function Parceiros() {
         </ul>
 
         {faltaLogo && (
-          <span className="mt-5 block font-mono text-[11.5px] font-medium tracking-[.06em] text-mute-450">
+          <span className="mt-5 block font-mono text-[0.71875rem] font-medium tracking-[.06em] text-mute-450">
             {parceiros.nota}
           </span>
         )}

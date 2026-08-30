@@ -1,64 +1,61 @@
 "use client";
 
-import { useEffect, useState } from "react";
-
-const FONT_STEPS = [100, 112, 125, 137];
-const FONT_KEY = "crie-font-step";
-const CONTRAST_KEY = "crie-high-contrast";
-
-function readInitialStep() {
-  if (typeof window === "undefined") return 0;
-  return Number(localStorage.getItem(FONT_KEY) ?? 0);
-}
-
-function readInitialContrast() {
-  if (typeof window === "undefined") return false;
-  return localStorage.getItem(CONTRAST_KEY) === "true";
-}
+import { useSyncExternalStore } from "react";
+import {
+  FONT_STEPS,
+  subscribe,
+  getStep,
+  getContrast,
+  getStepServer,
+  getContrastServer,
+  setStep,
+  setContrast,
+} from "./a11y-prefs";
 
 export function A11yToolbar() {
-  const [step, setStep] = useState(readInitialStep);
-  const [highContrast, setHighContrast] = useState(readInitialContrast);
-
-  useEffect(() => {
-    document.documentElement.style.fontSize = `${FONT_STEPS[step]}%`;
-  }, [step]);
-
-  useEffect(() => {
-    document.documentElement.classList.toggle("contrast-high", highContrast);
-  }, [highContrast]);
-
-  function applyStep(next: number) {
-    const clamped = Math.min(Math.max(next, 0), FONT_STEPS.length - 1);
-    setStep(clamped);
-    document.documentElement.style.fontSize = `${FONT_STEPS[clamped]}%`;
-    localStorage.setItem(FONT_KEY, String(clamped));
-  }
-
-  function toggleContrast() {
-    const next = !highContrast;
-    setHighContrast(next);
-    document.documentElement.classList.toggle("contrast-high", next);
-    localStorage.setItem(CONTRAST_KEY, String(next));
-  }
+  // O PREFS_SCRIPT já aplicou a preferência no DOM antes do paint. Aqui só
+  // espelhamos o valor, com snapshot de servidor igual ao padrão para não
+  // haver divergência de hidratação.
+  const step = useSyncExternalStore(subscribe, getStep, getStepServer);
+  const highContrast = useSyncExternalStore(subscribe, getContrast, getContrastServer);
 
   const btnClass =
-    "rounded-[2px] border border-white/50 px-2 py-1 font-mono text-xs font-medium text-white transition-colors duration-150 hover:bg-white hover:text-magenta";
+    "rounded-[2px] border border-white/50 px-2 py-1 font-mono text-xs font-medium text-white transition-colors duration-150 hover:bg-white hover:text-magenta disabled:opacity-50 disabled:hover:bg-transparent disabled:hover:text-white";
 
   return (
     <div className="flex items-center gap-1" role="group" aria-label="Controles de acessibilidade">
-      <button type="button" className={btnClass} onClick={() => applyStep(step - 1)} aria-label="Diminuir tamanho da fonte">
+      <button
+        type="button"
+        className={btnClass}
+        onClick={() => setStep(step - 1)}
+        disabled={step === 0}
+        aria-label="Diminuir tamanho da fonte"
+      >
         A-
       </button>
-      <button type="button" className={btnClass} onClick={() => applyStep(step + 1)} aria-label="Aumentar tamanho da fonte">
+      <button
+        type="button"
+        className={btnClass}
+        onClick={() => setStep(step + 1)}
+        disabled={step === FONT_STEPS.length - 1}
+        aria-label="Aumentar tamanho da fonte"
+      >
         A+
       </button>
       <button
         type="button"
         className={btnClass}
-        onClick={toggleContrast}
+        onClick={() => setStep(0)}
+        disabled={step === 0}
+        aria-label="Restaurar tamanho padrão da fonte"
+      >
+        A
+      </button>
+      <button
+        type="button"
+        className={btnClass}
+        onClick={() => setContrast(!highContrast)}
         aria-pressed={highContrast}
-        suppressHydrationWarning
         aria-label="Alternar alto contraste"
       >
         Contraste

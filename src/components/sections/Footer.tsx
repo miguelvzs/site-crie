@@ -20,7 +20,7 @@ export function Footer() {
               className="h-[45px] w-24 object-contain"
             />
           </span>
-          <span className="text-[15.5px] leading-[1.45]">
+          <span className="text-[0.96875rem] leading-[1.45]">
             {footer.linha1}
             <br />
             {footer.linha2}
@@ -32,14 +32,14 @@ export function Footer() {
             <a
               key={item.href}
               href={item.href}
-              className="text-[15.5px] text-mute-500 transition-colors duration-150 hover:text-warm-100"
+              className="text-[0.96875rem] text-mute-500 transition-colors duration-150 hover:text-warm-100"
             >
               {item.label}
             </a>
           ))}
           <Link
             href="/noticias"
-            className="text-[15.5px] text-mute-500 transition-colors duration-150 hover:text-warm-100"
+            className="text-[0.96875rem] text-mute-500 transition-colors duration-150 hover:text-warm-100"
           >
             Notícias
           </Link>
