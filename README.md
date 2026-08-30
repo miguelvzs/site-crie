@@ -1,36 +1,54 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Site institucional — CRIE / APAE Extrema
 
-## Getting Started
+Next.js 16 (App Router) + TypeScript + Tailwind CSS v4, SSG, sem backend obrigatório na v1.
 
-First, run the development server:
+Contexto completo do projeto: `docs/specs/constitution.md`. Sitemap: `docs/specs/00-sitemap.md`. Pendências de conteúdo real (fotos, textos, PIX, domínio): `docs/specs/pendencias.md`.
+
+## Dev
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Abre `http://localhost:3000`.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Build / produção local
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run build
+npm run start
+```
 
-## Learn More
+## Lint
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+npm run lint
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Estrutura
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- `content/` — conteúdo textual (JSON/MDX), fora dos componentes. Editar aqui não mexe em código
+- `src/app/` — rotas (App Router)
+- `src/components/ui/` — componentes base (Button, Card, Section, Timeline)
+- `src/components/layout/` — Header, Footer, SkipLink, MobileNav
+- `src/components/a11y/` — VLibras, toolbar fonte/contraste
+- `docs/specs/` — specs por página/feature, spec-driven (ver constitution.md pro processo)
 
-## Deploy on Vercel
+## Deploy na Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+1. Criar conta/projeto em [vercel.com](https://vercel.com) (ou `npm i -g vercel` pra usar a CLI)
+2. Conectar o repositório Git (GitHub/GitLab/Bitbucket) — push deste repo pra um remoto primeiro
+3. Vercel detecta Next.js automaticamente, sem configuração extra necessária
+4. Variável de ambiente opcional: `NEXT_PUBLIC_SITE_URL` — setar quando o domínio definitivo for escolhido (ver `docs/specs/pendencias.md`). Sem ela, usa `https://crieextrema.com.br` como placeholder
+5. Deploy automático a cada push; preview URL por PR
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Nenhum deploy foi executado nesta sessão — repositório ainda é só local, sem remoto configurado.
+
+## Pendências que bloqueiam publicação (não bloqueiam o build)
+
+Ver checklist completo em `docs/specs/pendencias.md`. Resumo: logo em alta resolução/transparente, fotos reais, texto completo das áreas de atuação, dados de doação PIX, confirmação de contato, domínio definitivo.
+
+## Acessibilidade
+
+Checklist completo em `docs/specs/accessibility-checklist.md`.
