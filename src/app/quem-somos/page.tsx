@@ -4,7 +4,7 @@ import { Timeline } from "@/components/ui/Timeline";
 import content from "@content/quem-somos.json";
 
 export const metadata: Metadata = {
-  title: "Quem Somos | CRIE/APAE Extrema",
+  title: "Quem Somos",
   description:
     "Conheça a história do CRIE/APAE Extrema, fundado em 1991, e a linha do tempo de certificações da instituição.",
 };

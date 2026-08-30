@@ -5,7 +5,7 @@ import doe from "@content/doe.json";
 import site from "@content/site.json";
 
 export const metadata: Metadata = {
-  title: "Como Ajudar | CRIE/APAE Extrema",
+  title: "Como Ajudar",
   description: "Doe via PIX, seja voluntário ou firme uma parceria com o CRIE/APAE Extrema.",
 };
 

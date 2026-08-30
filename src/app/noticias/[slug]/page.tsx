@@ -28,7 +28,7 @@ export async function generateMetadata({
   const { slug } = await params;
   const loaded = await loadPost(slug);
   if (!loaded) return {};
-  return { title: `${loaded.meta.title} | CRIE/APAE Extrema`, description: loaded.meta.excerpt };
+  return { title: loaded.meta.title, description: loaded.meta.excerpt };
 }
 
 export default async function NoticiaPost({ params }: { params: Promise<{ slug: string }> }) {

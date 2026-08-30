@@ -36,6 +36,19 @@ body {
   font-size: 1.0625rem; /* 17px base, público inclui baixa visão */
 }
 
+/* alto contraste — ativado via A11yToolbar, persistido em localStorage */
+:root.contrast-high {
+  --background: #ffffff;
+  --foreground: #000000;
+}
+.contrast-high a,
+.contrast-high button {
+  text-decoration: underline;
+}
+.contrast-high img {
+  filter: contrast(1.15);
+}
+
 /* respeita prefers-reduced-motion globalmente */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {

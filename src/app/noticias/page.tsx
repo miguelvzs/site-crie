@@ -5,7 +5,7 @@ import { Card } from "@/components/ui/Card";
 import { getAllPostsMeta } from "@/lib/posts";
 
 export const metadata: Metadata = {
-  title: "Notícias | CRIE/APAE Extrema",
+  title: "Notícias",
   description: "Últimas notícias e novidades do CRIE/APAE Extrema.",
 };
 

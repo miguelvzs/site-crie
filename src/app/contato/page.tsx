@@ -4,7 +4,7 @@ import { ContactForm } from "@/components/ContactForm";
 import site from "@content/site.json";
 
 export const metadata: Metadata = {
-  title: "Contato | CRIE/APAE Extrema",
+  title: "Contato",
   description: "Entre em contato com o CRIE/APAE Extrema.",
 };
 

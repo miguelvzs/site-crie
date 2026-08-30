@@ -3,7 +3,7 @@ import { Section } from "@/components/ui/Section";
 import areas from "@content/areas-de-atuacao.json";
 
 export const metadata: Metadata = {
-  title: "Áreas de Atuação | CRIE/APAE Extrema",
+  title: "Áreas de Atuação",
   description: "Conheça as 5 áreas de atuação do CRIE/APAE Extrema.",
 };
 

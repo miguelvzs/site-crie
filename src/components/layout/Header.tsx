@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import siteContent from "@content/site.json";
 import { MobileNav } from "./MobileNav";
+import { A11yToolbar } from "@/components/a11y/A11yToolbar";
 
 export function Header() {
   return (
@@ -21,7 +22,10 @@ export function Header() {
           </span>
         </Link>
 
-        <MobileNav items={siteContent.nav} />
+        <div className="flex items-center gap-4">
+          <A11yToolbar />
+          <MobileNav items={siteContent.nav} />
+        </div>
       </div>
     </header>
   );
