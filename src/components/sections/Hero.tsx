@@ -1,4 +1,4 @@
-import { Container, ImagePlaceholder } from "@/components/ui/primitives";
+import { Container, Foto } from "@/components/ui/primitives";
 import content from "@content/landing.json";
 
 /** Barra de quatro cores — motivo recorrente da identidade. Manter a ordem. */
@@ -38,11 +38,13 @@ export function Hero() {
           </div>
         </div>
 
-        <ImagePlaceholder
-          legenda={hero.imagemLegenda}
-          nota={hero.imagemNota}
+        <Foto
+          src={hero.imagem.src}
+          alt={hero.imagem.alt}
+          nota={hero.imagem.nota}
           tone="dark"
           height={440}
+          priority
         />
       </Container>
     </section>

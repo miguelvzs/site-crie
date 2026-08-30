@@ -1,4 +1,4 @@
-import { Container, Eyebrow, ImagePlaceholder } from "@/components/ui/primitives";
+import { Container, Eyebrow, Foto } from "@/components/ui/primitives";
 import { porExtenso, capitalizar } from "@/lib/por-extenso";
 import content from "@content/landing.json";
 
@@ -16,9 +16,10 @@ export function Historia() {
             {titulo}
           </h2>
           <div className="mt-8">
-            <ImagePlaceholder
-              legenda={historia.imagemLegenda}
-              nota={historia.imagemNota}
+            <Foto
+              src={historia.imagem.src}
+              alt={historia.imagem.alt}
+              nota={historia.imagem.nota}
               tone="light"
               height={300}
             />

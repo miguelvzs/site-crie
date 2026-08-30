@@ -8,11 +8,26 @@
     "fundacao": 1991
   },
   "nav": [
-    { "label": "Quem somos", "href": "#quem-somos" },
-    { "label": "Áreas de atuação", "href": "#atuacao" },
-    { "label": "História", "href": "#historia" },
-    { "label": "Como ajudar", "href": "#ajudar" },
-    { "label": "Contato", "href": "#contato" }
+    {
+      "label": "Quem somos",
+      "href": "#quem-somos"
+    },
+    {
+      "label": "Áreas de atuação",
+      "href": "#atuacao"
+    },
+    {
+      "label": "História",
+      "href": "#historia"
+    },
+    {
+      "label": "Como ajudar",
+      "href": "#ajudar"
+    },
+    {
+      "label": "Contato",
+      "href": "#contato"
+    }
   ],
   "topBar": {
     "mostrar": true,
@@ -26,8 +41,11 @@
     "paragrafo": "O CRIE atende gratuitamente pessoas com deficiência e suas famílias em Extrema, no sul de Minas Gerais. Fundado em 1991 por um grupo de cidadãos solidários, é filiado à Federação das APAEs e reconhecido como entidade de utilidade pública federal.",
     "ctaPrimario": "Quero ajudar o CRIE",
     "ctaSecundario": "Conhecer os atendimentos",
-    "imagemLegenda": "foto — atendimento ou oficina, horizontal",
-    "imagemNota": "Substituir por imagem real, com autorização de uso de imagem."
+    "imagem": {
+      "src": "/fotos/crie-extrema-mg-blog-extremamente-caipira.jpg",
+      "alt": "Equipe de voluntárias e voluntários do CRIE sorrindo atrás da barraca de comidas na festa Extremamente Caipira.",
+      "nota": "Voluntários do CRIE na festa Extremamente Caipira."
+    }
   },
   "credenciais": {
     "destaque": "Desde 1991",
@@ -44,7 +62,12 @@
       "Em 1991, Extrema não tinha atendimento especializado para pessoas com deficiência. Um grupo de cidadãos solidários se organizou e fundou o CRIE — Centro de Integração Especial, uma associação sem fins lucrativos.",
       "Desde então, o trabalho é o mesmo: desenvolver as potencialidades e habilidades de cada pessoa atendida, apoiar a família e defender o direito à inclusão na escola, no trabalho e na cidade.",
       "Todo o atendimento é gratuito, feito por equipe multidisciplinar, e sustentado por convênios públicos, doações e pelo apoio de empresas da região."
-    ]
+    ],
+    "imagem": {
+      "src": "/fotos/crie-extrema-mg-sobre-nos-foto-recorte.jpg",
+      "alt": "Atendido do CRIE, de camisa de time azul e branca, sorrindo e apontando para a frente.",
+      "nota": "Atendido do CRIE."
+    }
   },
   "atuacao": {
     "eyebrow": "Áreas de atuação",
@@ -90,8 +113,6 @@
   },
   "historia": {
     "eyebrow": "História",
-    "imagemLegenda": "foto — fachada da sede",
-    "imagemNota": "Rua Véu da Noiva, 62 — Extrema/MG.",
     "marcos": [
       {
         "ano": "1991",
@@ -123,7 +144,12 @@
         "cor": "#E5006E",
         "texto": "Autorização para funcionar como Centro de Atendimento Educacional Especializado e Certificado de Entidade Beneficente de Assistência Social."
       }
-    ]
+    ],
+    "imagem": {
+      "src": "/fotos/crie-extrema-mg-saude-quem-somos.jpg",
+      "alt": "Ipê branco florido no pátio da sede do CRIE, com o playground e o prédio amarelo ao fundo.",
+      "nota": "Rua Véu da Noiva, 62 — Extrema/MG."
+    }
   },
   "depoimentos": {
     "mostrar": true,
@@ -185,10 +211,22 @@
     "titulo": "Quem doa tem direito de ver",
     "paragrafo": "Documentos públicos da instituição, disponíveis para download.",
     "documentos": [
-      { "titulo": "Relatório anual de atividades", "url": null },
-      { "titulo": "Demonstrativo financeiro", "url": null },
-      { "titulo": "Estatuto social", "url": null },
-      { "titulo": "Certidões, títulos e registros", "url": null }
+      {
+        "titulo": "Relatório anual de atividades",
+        "url": null
+      },
+      {
+        "titulo": "Demonstrativo financeiro",
+        "url": null
+      },
+      {
+        "titulo": "Estatuto social",
+        "url": null
+      },
+      {
+        "titulo": "Certidões, títulos e registros",
+        "url": null
+      }
     ]
   },
   "parceiros": {
@@ -198,21 +236,66 @@
     "cta": "Sua empresa aqui",
     "nota": "Placas tipográficas provisórias — enviar os arquivos de logotipo dos parceiros para substituição.",
     "itens": [
-      { "nome": "Prefeitura de Extrema", "logoUrl": null },
-      { "nome": "Grupo Energisa", "logoUrl": null },
-      { "nome": "Pandurata Alimentos", "logoUrl": null },
-      { "nome": "Extremamedic Planos de Saúde", "logoUrl": null },
-      { "nome": "MPTran Clínica Médica e Psicológica", "logoUrl": null },
-      { "nome": "Dello", "logoUrl": null },
-      { "nome": "Jofpar", "logoUrl": null },
-      { "nome": "Frum", "logoUrl": null },
-      { "nome": "Viro Aço", "logoUrl": null },
-      { "nome": "Eletan Materiais Elétricos", "logoUrl": null },
-      { "nome": "Force Line", "logoUrl": null },
-      { "nome": "Poli Sopro", "logoUrl": null },
-      { "nome": "MW Auto Peças e Mecânica Waltão", "logoUrl": null },
-      { "nome": "Cadabra Publicidade", "logoUrl": null },
-      { "nome": "Musical Box", "logoUrl": null }
+      {
+        "nome": "Prefeitura de Extrema",
+        "logoUrl": null
+      },
+      {
+        "nome": "Grupo Energisa",
+        "logoUrl": null
+      },
+      {
+        "nome": "Pandurata Alimentos",
+        "logoUrl": null
+      },
+      {
+        "nome": "Extremamedic Planos de Saúde",
+        "logoUrl": null
+      },
+      {
+        "nome": "MPTran Clínica Médica e Psicológica",
+        "logoUrl": null
+      },
+      {
+        "nome": "Dello",
+        "logoUrl": null
+      },
+      {
+        "nome": "Jofpar",
+        "logoUrl": null
+      },
+      {
+        "nome": "Frum",
+        "logoUrl": null
+      },
+      {
+        "nome": "Viro Aço",
+        "logoUrl": null
+      },
+      {
+        "nome": "Eletan Materiais Elétricos",
+        "logoUrl": null
+      },
+      {
+        "nome": "Force Line",
+        "logoUrl": null
+      },
+      {
+        "nome": "Poli Sopro",
+        "logoUrl": null
+      },
+      {
+        "nome": "MW Auto Peças e Mecânica Waltão",
+        "logoUrl": null
+      },
+      {
+        "nome": "Cadabra Publicidade",
+        "logoUrl": null
+      },
+      {
+        "nome": "Musical Box",
+        "logoUrl": null
+      }
     ]
   },
   "contato": {

@@ -97,24 +97,6 @@ body {
   text-decoration: underline;
 }
 
-/* hachura dos placeholders de imagem */
-.hatch-dark {
-  background-color: var(--ink-700);
-  background-image: repeating-linear-gradient(
-    135deg,
-    rgba(246, 245, 242, 0.055) 0 12px,
-    transparent 12px 24px
-  );
-}
-.hatch-light {
-  background-color: var(--warm-200);
-  background-image: repeating-linear-gradient(
-    135deg,
-    rgba(22, 24, 28, 0.06) 0 12px,
-    transparent 12px 24px
-  );
-}
-
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;

@@ -1,3 +1,4 @@
+import Image from "next/image";
 import type { ReactNode } from "react";
 
 /** Contêiner de 1240px com padding horizontal de 32px (handoff: Design Tokens → Espaçamento). */
@@ -17,38 +18,45 @@ export function Eyebrow({ children, color }: { children: ReactNode; color: strin
   );
 }
 
-/** Placeholder hachurado de imagem. Todos os blocos assim são vazios a preencher com foto real. */
-export function ImagePlaceholder({
-  legenda,
+/** Foto com legenda opcional. Altura fixa (handoff), recorte via object-fit. */
+export function Foto({
+  src,
+  alt,
   nota,
   tone,
   height,
+  priority = false,
+  imgClassName = "object-cover",
 }: {
-  legenda: string;
-  nota: string;
+  src: string;
+  alt: string;
+  nota?: string;
   tone: "dark" | "light";
   height: number;
+  priority?: boolean;
+  imgClassName?: string;
 }) {
   const isDark = tone === "dark";
   return (
-    <div className="flex flex-col gap-3">
-      <div
-        className={`flex items-end justify-center p-5 ${isDark ? "hatch-dark" : "hatch-light"}`}
-        style={{ height }}
-      >
-        <span
-          className="text-center font-mono text-[12.5px] font-medium uppercase tracking-[.1em]"
-          style={{ color: isDark ? "var(--mute-500)" : "var(--mute-400)" }}
-        >
-          {legenda}
-        </span>
+    <figure className="m-0 flex flex-col gap-3">
+      <div className="relative w-full overflow-hidden" style={{ height }}>
+        <Image
+          src={src}
+          alt={alt}
+          fill
+          sizes="(max-width: 1024px) 100vw, 620px"
+          priority={priority}
+          className={imgClassName}
+        />
       </div>
-      <span
-        className="font-mono text-[11.5px] font-medium tracking-[.06em]"
-        style={{ color: isDark ? "var(--mute-600)" : "var(--mute-450)" }}
-      >
-        {nota}
-      </span>
-    </div>
+      {nota && (
+        <figcaption
+          className="font-mono text-[11.5px] font-medium tracking-[.06em]"
+          style={{ color: isDark ? "var(--mute-600)" : "var(--mute-450)" }}
+        >
+          {nota}
+        </figcaption>
+      )}
+    </figure>
   );
 }
