@@ -5,8 +5,6 @@ export function Transparencia() {
   const { transparencia } = content;
   if (!transparencia.mostrar) return null;
 
-  const temDocumento = transparencia.documentos.some((d) => d.url);
-
   return (
     <section id="transparencia" className="border-t border-line-200 bg-white">
       <Container className="grid items-start gap-16 py-24 lg:grid-cols-[.9fr_1.1fr]">
@@ -45,12 +43,6 @@ export function Transparencia() {
             );
           })}
         </ul>
-
-        {!temDocumento && (
-          <span className="font-mono text-[0.71875rem] font-medium tracking-[.06em] text-mute-450 lg:col-start-2">
-            Documentos ainda não enviados pela instituição — publicar os PDFs reais antes de divulgar o site.
-          </span>
-        )}
       </Container>
     </section>
   );

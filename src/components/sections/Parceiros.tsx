@@ -7,8 +7,6 @@ export function Parceiros() {
   const { parceiros } = content;
   if (!parceiros.mostrar) return null;
 
-  const faltaLogo = parceiros.itens.some((p) => !p.logoUrl);
-
   return (
     <section id="parceiros" className="border-t border-line-200 bg-warm-100">
       <Container className="py-24">
@@ -47,12 +45,6 @@ export function Parceiros() {
             </li>
           ))}
         </ul>
-
-        {faltaLogo && (
-          <span className="mt-5 block font-mono text-[0.71875rem] font-medium tracking-[.06em] text-mute-450">
-            {parceiros.nota}
-          </span>
-        )}
       </Container>
     </section>
   );
