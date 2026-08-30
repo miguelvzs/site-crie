@@ -1,0 +1,17 @@
+{
+  "pix": {
+    "pendente": true,
+    "chave": null,
+    "qrCodeUrl": null
+  },
+  "voluntariado": {
+    "texto": "Voluntários ajudam nas oficinas, eventos e atividades de apoio às famílias atendidas. Entre em contato pra saber como participar."
+  },
+  "parcerias": {
+    "texto": "Empresas e organizações podem apoiar projetos específicos do CRIE/APAE Extrema através de parcerias."
+  },
+  "transparencia": {
+    "texto": "O CRIE/APAE Extrema é fiscalizado pelo Conselho Nacional de Assistência Social e presta contas conforme exigido pela legislação.",
+    "relatorioUrl": null
+  }
+}

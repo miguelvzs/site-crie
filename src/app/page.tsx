@@ -1,14 +1,7 @@
 import { Section } from "@/components/ui/Section";
 import { Card } from "@/components/ui/Card";
 import { Button } from "@/components/ui/Button";
-
-const areas = [
-  { title: "Atendimento Educacional", desc: "Setor pedagógico com recursos educacionais especializados (CAEE)." },
-  { title: "Saúde", desc: "Ações voltadas à melhoria da qualidade de vida dos assistidos." },
-  { title: "Assistência Social", desc: "Manutenção das qualificações e apoio às famílias." },
-  { title: "Oficinas", desc: "Duas oficinas atendendo jovens e adultos." },
-  { title: "Projetos Complementares", desc: "Escola de Pais (programa da UNIAPAE-MG), entre outros." },
-];
+import areas from "@content/areas-de-atuacao.json";
 
 export default function Home() {
   return (
@@ -30,9 +23,9 @@ export default function Home() {
       <Section id="areas" title="Áreas de atuação">
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {areas.map((area) => (
-            <Card key={area.title}>
-              <h3 className="font-bold text-lg mb-2">{area.title}</h3>
-              <p className="text-sm text-foreground/80">{area.desc}</p>
+            <Card key={area.id}>
+              <h3 className="font-bold text-lg mb-2">{area.titulo}</h3>
+              <p className="text-sm text-foreground/80">{area.resumo}</p>
             </Card>
           ))}
         </div>

@@ -1,0 +1,32 @@
+[
+  {
+    "id": "atendimento-educacional",
+    "titulo": "Atendimento Educacional",
+    "resumo": "Setor pedagógico com recursos educacionais especializados (CAEE).",
+    "textoCompleto": null
+  },
+  {
+    "id": "saude",
+    "titulo": "Saúde",
+    "resumo": "Ações voltadas à melhoria da qualidade de vida dos assistidos.",
+    "textoCompleto": null
+  },
+  {
+    "id": "assistencia-social",
+    "titulo": "Assistência Social",
+    "resumo": "Manutenção das qualificações e apoio às famílias.",
+    "textoCompleto": null
+  },
+  {
+    "id": "oficinas",
+    "titulo": "Oficinas",
+    "resumo": "Duas oficinas atendendo jovens e adultos.",
+    "textoCompleto": null
+  },
+  {
+    "id": "projetos-complementares",
+    "titulo": "Projetos Complementares",
+    "resumo": "Escola de Pais (programa da UNIAPAE-MG), entre outros.",
+    "textoCompleto": null
+  }
+]
