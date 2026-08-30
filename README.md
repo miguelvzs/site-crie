@@ -53,6 +53,12 @@ Setar em Vercel → Project → Settings → Environment Variables.
 
 Repositório conectado à Vercel: todo push em `master` gera deploy de produção; PRs geram preview.
 
+Deploy manual, se precisar forçar:
+
+```bash
+vercel deploy --prod
+```
+
 ## Acessibilidade
 
 Checklist em `docs/specs/accessibility-checklist.md`. Itens que exigem navegador real (Lighthouse, teclado, VLibras) ainda não foram medidos.
