@@ -37,9 +37,16 @@ Público: famílias (baixa renda, mobile-first), doadores, voluntários, parceir
 
 ## Design
 - Tom acolhedor, humano, sério — sem infantilizar
-- Paleta a partir da logo (azul institucional + acento quente) — pendente logo
+- Logo real recebida: colorida/lúdica (magenta, amarelo, roxo, ciano, azul), não é logo mono-azul — ajusta expectativa do brief ("APAEs costumam usar azul")
+- Paleta extraída da logo (contraste AA checado, texto branco sobre a cor):
+  - `--color-brand-blue: #1663B3` — 6.05:1 ✅ AA texto normal → cor primária (CTA, links, header)
+  - `--color-brand-purple: #6E2E8E` — 8.59:1 ✅ AA/AAA → CTA secundário, destaque
+  - `--color-brand-pink: #E4007C` — 4.58:1 ⚠️ só texto grande/negrito (≥18px bold) ou usar shade mais escuro (`#C10069`) se precisar texto normal
+  - `--color-brand-cyan: #00AEEF`, `--color-brand-yellow: #F5B711` — falham contraste com texto branco. Uso só decorativo (blobs, ícones, fundo de card) com texto escuro (`#1A1A1A`) por cima
+  - Texto corpo/institucional: neutro escuro sobre branco (não sobre fundo colorido) — legibilidade > estética, público inclui baixa visão
+- Aplicação: paleta vibrante em elementos decorativos/hero/ilustração (ecoa a logo), texto de leitura longa sempre neutro alto-contraste
 - Tipografia grande/legível (público idoso, baixa visão)
-- Placeholders marcados pra fotos reais
+- Placeholders marcados pra fotos reais (logo atual: `public/brand/logo-crie-original.jpg`, fundo branco não-transparente — pendente versão PNG/SVG transparente)
 - CTAs evidentes: "Doe agora", "Fale conosco"
 
 ## Processo (spec-driven)

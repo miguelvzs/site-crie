@@ -2,7 +2,8 @@
 
 Seguir com placeholder marcado até Miguel entregar. Nunca inventar.
 
-- [ ] Logo CRIE alta resolução (+ versão fundo escuro se houver)
+- [x] Logo CRIE recebido (`public/brand/logo-crie-original.jpg`) — colorido, fundo branco/nuvens não-transparente
+  - [ ] Ainda falta: versão alta resolução com fundo transparente (PNG/SVG) e versão pra fundo escuro
 - [ ] Fotos reais atividades/instalações/equipe (com autorização de uso de imagem)
 - [ ] Texto completo das 5 áreas de atuação
 - [ ] Dados de doação: chave PIX / dados bancários / QR code

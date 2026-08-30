@@ -1,0 +1,26 @@
+{
+  "org": {
+    "name": "CRIE — Centro de Integração Especial / APAE de Extrema",
+    "shortName": "CRIE/APAE Extrema"
+  },
+  "nav": [
+    { "label": "Início", "href": "/" },
+    { "label": "Quem Somos", "href": "/quem-somos" },
+    { "label": "Áreas de Atuação", "href": "/areas-de-atuacao" },
+    { "label": "Como Ajudar", "href": "/doe" },
+    { "label": "Notícias", "href": "/noticias" },
+    { "label": "Contato", "href": "/contato" }
+  ],
+  "contact": {
+    "address": "Rua Véu da Noiva, 62 — Ponte Nova, Extrema/MG, CEP 37640-000",
+    "phone": "(35) 98423-5789",
+    "phoneHref": "tel:+553584235789",
+    "email": "crieespecial@yahoo.com.br",
+    "cnpj": "25.651.282/0001-18",
+    "note": "CONFIRMAR com a diretora Agnes antes de publicar — pode estar desatualizado"
+  },
+  "social": {
+    "facebook": "https://facebook.com/crieespecial",
+    "instagram": "https://instagram.com/apaedeextrema"
+  }
+}
