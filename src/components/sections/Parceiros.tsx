@@ -49,19 +49,18 @@ export function Parceiros() {
               className="flex min-h-28 items-center justify-center border border-line-200 bg-white px-5 py-5"
             >
               {parceiro.logoUrl ? (
-                /* Caixa óptica de 64px: logotipo quadrado (o brasão da Prefeitura)
-                   fica ilegível numa faixa baixa, e o horizontal já é limitado pela
-                   largura da célula — então a altura maior equilibra os dois.
-                   `sizes` evita variante de 2000px para um slot de 200. */
-                <span className="relative block h-16 w-full">
-                  <Image
-                    src={parceiro.logoUrl}
-                    alt={parceiro.nome}
-                    fill
-                    sizes="(max-width: 640px) 45vw, (max-width: 1024px) 30vw, 200px"
-                    className="object-contain"
-                  />
-                </span>
+                /* `width`/`height` são as dimensões reais do arquivo, então o
+                   logotipo nunca é ampliado — ampliar raster só borra. Os limites
+                   de CSS agem só para baixo: `max-h-16` corta o que for alto demais
+                   (o brasão da Prefeitura, de 546×552) e `max-w-full` o que for
+                   largo demais. Reduzir mantém nitidez; ampliar, não. */
+                <Image
+                  src={parceiro.logoUrl}
+                  alt={parceiro.nome}
+                  width={parceiro.logoW}
+                  height={parceiro.logoH}
+                  className="h-auto max-h-16 w-auto max-w-full object-contain"
+                />
               ) : (
                 <span className="text-center text-base font-semibold leading-[1.25] text-ink-500 text-pretty">
                   {parceiro.nome}

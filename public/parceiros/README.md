@@ -8,12 +8,38 @@ Os arquivos desta pasta abastecem a seção Parceiros da landing. Enquanto um lo
 2. Preencha `logoUrl` do parceiro em `content/landing.json`
 
 ```json
-{ "nome": "Grupo Energisa", "logoUrl": "/parceiros/grupo-energisa.png" }
+{
+  "nome": "Grupo Energisa",
+  "logoUrl": "/parceiros/grupo-energisa.png",
+  "logoW": 165,
+  "logoH": 55
+}
 ```
 
-Nada mais. O componente já trata os dois estados.
+`logoW` e `logoH` são as dimensões reais do arquivo em pixels, e têm que bater
+com ele. São o que impede o navegador de ampliar o logotipo (ver abaixo) e o que
+reserva o espaço antes de a imagem carregar, evitando salto de layout.
+
+Para conferir todas de uma vez:
+
+```bash
+python -c "
+from PIL import Image; import glob, os
+for f in sorted(glob.glob('public/parceiros/*.png')):
+    print(os.path.basename(f), Image.open(f).size)"
+```
 
 ## Especificação dos arquivos
+
+### Regra: logotipo nunca é ampliado
+
+A célula usa `width`/`height` reais mais `max-h-16 w-auto max-w-full`. Os limites
+de CSS agem só para baixo: arquivo grande é reduzido (redução mantém nitidez),
+arquivo pequeno fica no tamanho nativo em vez de ser esticado.
+
+Consequência prática: **o tamanho do logotipo na grade é o tamanho do arquivo**,
+até o teto de 64px de altura. Arquivo pequeno aparece pequeno. É o comportamento
+desejado — borrado seria pior — mas é mais um motivo para pedir o arquivo grande.
 
 | Item | Valor |
 |---|---|

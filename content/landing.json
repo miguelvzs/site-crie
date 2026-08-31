@@ -237,63 +237,93 @@
     "itens": [
       {
         "nome": "Prefeitura de Extrema",
-        "logoUrl": "/parceiros/prefeitura-de-extrema.png"
+        "logoUrl": "/parceiros/prefeitura-de-extrema.png",
+        "logoW": 546,
+        "logoH": 552
       },
       {
         "nome": "Grupo Energisa",
-        "logoUrl": "/parceiros/grupo-energisa.png"
+        "logoUrl": "/parceiros/grupo-energisa.png",
+        "logoW": 165,
+        "logoH": 55
       },
       {
         "nome": "Pandurata Alimentos",
-        "logoUrl": "/parceiros/pandurata-alimentos.png"
+        "logoUrl": "/parceiros/pandurata-alimentos.png",
+        "logoW": 167,
+        "logoH": 31
       },
       {
         "nome": "Extremamedic Planos de Saúde",
-        "logoUrl": "/parceiros/extremamedic.png"
+        "logoUrl": "/parceiros/extremamedic.png",
+        "logoW": 163,
+        "logoH": 32
       },
       {
         "nome": "MPTran Clínica Médica e Psicológica",
-        "logoUrl": "/parceiros/mptran.png"
+        "logoUrl": "/parceiros/mptran.png",
+        "logoW": 152,
+        "logoH": 46
       },
       {
         "nome": "Dello",
-        "logoUrl": "/parceiros/dello.png"
+        "logoUrl": "/parceiros/dello.png",
+        "logoW": 137,
+        "logoH": 55
       },
       {
         "nome": "Jofpar",
-        "logoUrl": "/parceiros/jofpar.png"
+        "logoUrl": "/parceiros/jofpar.png",
+        "logoW": 121,
+        "logoH": 94
       },
       {
         "nome": "Frum",
-        "logoUrl": "/parceiros/frum.png"
+        "logoUrl": "/parceiros/frum.png",
+        "logoW": 172,
+        "logoH": 37
       },
       {
         "nome": "Viro Aço",
-        "logoUrl": "/parceiros/viro-aco.png"
+        "logoUrl": "/parceiros/viro-aco.png",
+        "logoW": 169,
+        "logoH": 48
       },
       {
         "nome": "Eletan Materiais Elétricos",
-        "logoUrl": "/parceiros/eletan.png"
+        "logoUrl": "/parceiros/eletan.png",
+        "logoW": 168,
+        "logoH": 84
       },
       {
         "nome": "Force Line",
-        "logoUrl": "/parceiros/force-line.png"
+        "logoUrl": "/parceiros/force-line.png",
+        "logoW": 138,
+        "logoH": 60
       },
       {
         "nome": "Poli Sopro",
-        "logoUrl": "/parceiros/poli-sopro.png"
+        "logoUrl": "/parceiros/poli-sopro.png",
+        "logoW": 169,
+        "logoH": 64
       },
       {
         "nome": "MW Auto Peças e Mecânica Waltão",
-        "logoUrl": "/parceiros/mw-auto-pecas.png"
+        "logoUrl": "/parceiros/mw-auto-pecas.png",
+        "logoW": 174,
+        "logoH": 99
       },
       {
         "nome": "Cadabra Publicidade",
-        "logoUrl": "/parceiros/cadabra-publicidade.png"
+        "logoUrl": "/parceiros/cadabra-publicidade.png",
+        "logoW": 169,
+        "logoH": 54
       },
       {
         "nome": "Musical Box",
-        "logoUrl": "/parceiros/musical-box.png"
+        "logoUrl": "/parceiros/musical-box.png",
+        "logoW": 475,
+        "logoH": 263
       }
     ]
   },
