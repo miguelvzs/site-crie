@@ -1,4 +1,5 @@
 import { Container, Eyebrow } from "@/components/ui/primitives";
+import { Reveal, Grupo, Item } from "@/components/ui/motion";
 import content from "@content/landing.json";
 
 export function Atuacao() {
@@ -7,17 +8,20 @@ export function Atuacao() {
   return (
     <section id="atuacao" className="border-t border-line-200 bg-white">
       <Container className="py-[100px]">
-        <Eyebrow color="var(--magenta)">{atuacao.eyebrow}</Eyebrow>
+        <Reveal>
+          <Eyebrow color="var(--magenta)">{atuacao.eyebrow}</Eyebrow>
         <h2 className="m-0 mt-[18px] max-w-[820px] font-display text-[2rem] font-extrabold leading-[1.05] tracking-[-.025em] text-pretty sm:text-[2.75rem]">
           {atuacao.titulo}
         </h2>
         <p className="m-0 mt-[18px] max-w-[720px] text-[1.1875rem] leading-[1.55] text-slate-400 text-pretty">
           {atuacao.paragrafo}
         </p>
+        </Reveal>
 
-        <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-6">
+        <Grupo className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-6">
           {atuacao.cards.map((card) => (
-            <article
+            <Item
+              as="article"
               key={card.numero}
               className={`flex flex-col gap-[14px] bg-warm-100 px-[30px] pb-[38px] pt-[34px] ${
                 card.span === 2 ? "lg:col-span-2" : "lg:col-span-3"
@@ -33,9 +37,9 @@ export function Atuacao() {
               <p className="m-0 text-[1.03125rem] leading-[1.55] text-slate-400 text-pretty">
                 {card.corpo}
               </p>
-            </article>
+            </Item>
           ))}
-        </div>
+        </Grupo>
       </Container>
     </section>
   );

@@ -1,4 +1,5 @@
 import { Container, Eyebrow } from "@/components/ui/primitives";
+import { Reveal, Grupo, Item } from "@/components/ui/motion";
 import content from "@content/landing.json";
 
 /** Handoff: grid fixo, deliberadamente. Não converter em carrossel — esconde conteúdo e prejudica a11y. */
@@ -9,13 +10,16 @@ export function Depoimentos() {
   return (
     <section className="bg-roxo text-white">
       <Container className="py-24">
-        <Eyebrow color="var(--roxo-claro)">{depoimentos.eyebrow}</Eyebrow>
+        <Reveal>
+          <Eyebrow color="var(--roxo-claro)">{depoimentos.eyebrow}</Eyebrow>
         <h2 className="mb-10 mt-[18px] max-w-[760px] font-display text-[1.875rem] font-extrabold leading-[1.05] tracking-[-.025em] text-pretty sm:text-[2.5rem]">
           {depoimentos.titulo}
         </h2>
-        <div className="grid items-stretch gap-7 sm:grid-cols-2 lg:grid-cols-3">
+        </Reveal>
+        <Grupo className="grid items-stretch gap-7 sm:grid-cols-2 lg:grid-cols-3">
           {depoimentos.itens.map((item) => (
-            <figure
+            <Item
+              as="figure"
               key={item.nome}
               className="m-0 flex flex-col gap-6 bg-white/12 px-8 py-[34px]"
             >
@@ -30,9 +34,9 @@ export function Depoimentos() {
                   <span className="text-[0.96875rem] text-roxo-claro">{item.relacao}</span>
                 )}
               </figcaption>
-            </figure>
+            </Item>
           ))}
-        </div>
+        </Grupo>
       </Container>
     </section>
   );

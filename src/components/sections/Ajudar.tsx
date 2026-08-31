@@ -1,4 +1,5 @@
 import { Container, Eyebrow } from "@/components/ui/primitives";
+import { Reveal, Grupo, Item } from "@/components/ui/motion";
 import content from "@content/landing.json";
 
 export function Ajudar() {
@@ -7,17 +8,20 @@ export function Ajudar() {
   return (
     <section id="ajudar" className="bg-warm-100">
       <Container className="py-[100px]">
-        <Eyebrow color="var(--verde)">{ajudar.eyebrow}</Eyebrow>
+        <Reveal>
+          <Eyebrow color="var(--verde)">{ajudar.eyebrow}</Eyebrow>
         <h2 className="m-0 mt-[18px] max-w-[820px] font-display text-[2rem] font-extrabold leading-[1.05] tracking-[-.025em] text-pretty sm:text-[2.75rem]">
           {ajudar.titulo}
         </h2>
         <p className="m-0 mt-[18px] max-w-[720px] text-[1.1875rem] leading-[1.55] text-slate-400 text-pretty">
           {ajudar.paragrafo}
         </p>
+        </Reveal>
 
-        <div className="mt-14 grid items-stretch gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <Grupo className="mt-14 grid items-stretch gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {ajudar.cards.map((card) => (
-            <article
+            <Item
+              as="article"
               key={card.kicker}
               className={`flex flex-col gap-4 px-[34px] py-10 ${
                 card.destaque
@@ -42,16 +46,10 @@ export function Ajudar() {
                 {card.corpo}
               </p>
 
-              {card.destaque && (
+              {card.destaque && ajudar.chavePix && (
                 <div className="mt-2 flex flex-col gap-2 border-t border-ink-600 pt-5">
                   <span className="font-mono text-xs font-medium text-mute-500">CHAVE PIX</span>
-                  {ajudar.chavePix ? (
-                    <span className="text-[1.0625rem] font-semibold text-warm-100">{ajudar.chavePix}</span>
-                  ) : (
-                    <span className="text-[0.9375rem] italic text-mute-500">
-                      [pendente: chave Pix oficial não publicada até confirmação da direção]
-                    </span>
-                  )}
+                  <span className="text-[1.0625rem] font-semibold text-warm-100">{ajudar.chavePix}</span>
                 </div>
               )}
 
@@ -65,9 +63,9 @@ export function Ajudar() {
               >
                 {card.cta}
               </a>
-            </article>
+            </Item>
           ))}
-        </div>
+        </Grupo>
       </Container>
     </section>
   );

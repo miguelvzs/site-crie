@@ -1,5 +1,6 @@
 import { Container, Eyebrow } from "@/components/ui/primitives";
 import { ContatoForm } from "./ContatoForm";
+import { Reveal } from "@/components/ui/motion";
 import content from "@content/landing.json";
 
 const labelClasses = "font-mono text-xs font-medium tracking-[.12em] text-mute-600";
@@ -12,7 +13,7 @@ export function Contato() {
   return (
     <section id="contato" className="bg-ink-900 text-warm-100">
       <Container className="grid gap-[72px] py-[100px] lg:grid-cols-2">
-        <div className="flex flex-col">
+        <Reveal className="flex flex-col">
           <Eyebrow color="var(--amarelo)">{contato.eyebrow}</Eyebrow>
           <h2 className="m-0 mt-[18px] font-display text-[2rem] font-extrabold leading-[1.05] tracking-[-.025em] text-pretty sm:text-[2.75rem]">
             {contato.titulo}
@@ -51,7 +52,7 @@ export function Contato() {
               </span>
             )}
           </address>
-        </div>
+        </Reveal>
 
         <ContatoForm />
       </Container>

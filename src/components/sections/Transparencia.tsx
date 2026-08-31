@@ -1,4 +1,5 @@
 import { Container, Eyebrow } from "@/components/ui/primitives";
+import { Reveal, Grupo, Item } from "@/components/ui/motion";
 import content from "@content/landing.json";
 
 export function Transparencia() {
@@ -8,7 +9,7 @@ export function Transparencia() {
   return (
     <section id="transparencia" className="border-t border-line-200 bg-white">
       <Container className="grid items-start gap-16 py-24 lg:grid-cols-[.9fr_1.1fr]">
-        <div className="flex flex-col">
+        <Reveal className="flex flex-col">
           <Eyebrow color="var(--amarelo)">{transparencia.eyebrow}</Eyebrow>
           <h2 className="m-0 mt-[18px] font-display text-[1.875rem] font-extrabold leading-[1.05] tracking-[-.025em] text-pretty sm:text-[2.5rem]">
             {transparencia.titulo}
@@ -16,16 +17,16 @@ export function Transparencia() {
           <p className="m-0 mt-[18px] text-lg leading-[1.55] text-slate-400 text-pretty">
             {transparencia.paragrafo}
           </p>
-        </div>
+        </Reveal>
 
-        <ul className="m-0 flex list-none flex-col p-0">
+        <Grupo as="ul" className="m-0 flex list-none flex-col p-0">
           {transparencia.documentos.map((doc, i) => {
             const linhas = `flex items-center justify-between gap-6 py-[22px] ${
               i === 0 ? "border-t-2 border-line-200" : "border-t border-line-200"
             } ${i === transparencia.documentos.length - 1 ? "border-b-2 border-b-line-200" : ""}`;
 
             return (
-              <li key={doc.titulo}>
+              <Item as="li" key={doc.titulo}>
                 {doc.url ? (
                   <a href={doc.url} className={`${linhas} text-ink-800 transition-colors duration-150 hover:text-magenta`}>
                     <span className="text-[1.1875rem] font-semibold">{doc.titulo}</span>
@@ -39,10 +40,10 @@ export function Transparencia() {
                     </span>
                   </div>
                 )}
-              </li>
+              </Item>
             );
           })}
-        </ul>
+        </Grupo>
       </Container>
     </section>
   );

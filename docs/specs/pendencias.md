@@ -7,7 +7,11 @@ Bloqueiam a publicação. Não bloqueiam build nem deploy — cada uma renderiza
   - [ ] Pedir **SVG** da marca — em tela retina o PNG fica macio (handoff)
 - [ ] **Foto do hero** — horizontal, atendimento ou oficina. Autorização de uso de imagem por escrito (há menores)
 - [ ] **Foto da fachada da sede** — vertical/quadrada, seção História
-- [ ] **15 logotipos de parceiros** — PNG transparente ou SVG. Hoje são placas tipográficas provisórias
+- [x] **15 logotipos de parceiros** — recuperados do site antigo (`crieextrema.com.br`)
+  e implementados. Ressalvas de qualidade e os 5 apoiadores antigos fora da lista
+  atual em `public/parceiros/README.md`
+  - [ ] Confirmar com a direção quais empresas seguem apoiando (lista de 2019)
+  - [ ] Pedir arquivo em alta — 13 dos 15 vieram a 174×99px e ficam macios em retina
 - [ ] **PDFs de transparência** — relatório de atividades, demonstrativo financeiro, estatuto social, certidões
 - [ ] **Chave Pix oficial** — card de doação
 - [ ] **Horário de atendimento** — não consta no protótipo; campo `contato.horarioAtendimento` já existe e some quando `null`

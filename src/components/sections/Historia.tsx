@@ -1,5 +1,6 @@
 import { Container, Eyebrow, Foto } from "@/components/ui/primitives";
 import { porExtenso, capitalizar } from "@/lib/por-extenso";
+import { Reveal, Grupo, Item } from "@/components/ui/motion";
 import content from "@content/landing.json";
 
 export function Historia() {
@@ -10,7 +11,7 @@ export function Historia() {
   return (
     <section id="historia" className="border-t border-line-200 bg-warm-100">
       <Container className="grid items-start gap-16 py-[100px] lg:grid-cols-[.8fr_1.2fr]">
-        <div className="flex flex-col">
+        <Reveal className="flex flex-col">
           <Eyebrow color="var(--ciano)">{historia.eyebrow}</Eyebrow>
           <h2 className="m-0 mt-[18px] font-display text-[2rem] font-extrabold leading-[1.05] tracking-[-.025em] text-pretty sm:text-[2.75rem]">
             {titulo}
@@ -24,11 +25,12 @@ export function Historia() {
               height={300}
             />
           </div>
-        </div>
+        </Reveal>
 
-        <ol className="m-0 flex list-none flex-col p-0 pt-2">
+        <Grupo as="ol" className="m-0 flex list-none flex-col p-0 pt-2">
           {historia.marcos.map((marco, i) => (
-            <li
+            <Item
+              as="li"
               key={marco.ano}
               className={`grid grid-cols-[68px_1fr] gap-7 py-6 sm:grid-cols-[104px_1fr] ${
                 i === 0 ? "border-t-2 border-ink-800" : "border-t border-line-300"
@@ -43,9 +45,9 @@ export function Historia() {
               <span className="text-[1.09375rem] leading-[1.5] text-ink-500 text-pretty">
                 {marco.texto}
               </span>
-            </li>
+            </Item>
           ))}
-        </ol>
+        </Grupo>
       </Container>
     </section>
   );
